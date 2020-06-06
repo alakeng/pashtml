@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html class="client-js" dir="ltr" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>Helper types - Free Pascal wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Helper_types","wgTitle":"Helper types","wgCurRevisionId":128287,"wgRevisionId":128287,"wgArticleId":6152,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Data types"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Helper_types","wgRelevantArticleId":6152,"wgRequestId":"7e8ce62ee91033e74027d365","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSmjSize":110,"wgSmjUseChem":true,"wgSmjInlineMath":[["[math]","[/math]"]]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","ext.pygments":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.monobook.styles":"ready"});mw.loader.implement("user.tokens@189iure",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["ext.SmjCDN","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest"]);});</script>
+<link rel="stylesheet" href="Helper%20types%20-%20Free%20Pascal%20wiki_files/load.css">
+<script async="" src="Helper%20types%20-%20Free%20Pascal%20wiki_files/load_002.php"></script>
+<!--[if IE 6]><link rel="stylesheet" href="/skins/MonoBook/resources/IE60Fixes.css?303" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="/skins/MonoBook/resources/IE70Fixes.css?303" media="screen"/><![endif]-->
+<style>
+.suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:0;z-index:1099;padding:0;margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:#fff;cursor:pointer;border:1px solid #a2a9b1;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:#fff;cursor:pointer;border:1px solid #a2a9b1;padding:0;margin:0}.suggestions-result{color:#000;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left; overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.suggestions-result-current{background-color:#2a4b8d;color:#fff}.suggestions-special .special-label{color:#72777d;text-align:left}.suggestions-special .special-query{color:#000;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:#c8ccd1}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:#fff}.highlight{font-weight:bold}
+@media screen {
+	.tochidden,.toctoggle{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}.toctoggle{font-size:94%}}
+@media print {
+	.toc.tochidden,.toctoggle{display:none}}</style><style>
+.suggestions a.mw-searchSuggest-link,.suggestions a.mw-searchSuggest-link:hover,.suggestions a.mw-searchSuggest-link:active,.suggestions a.mw-searchSuggest-link:focus{color:#000;text-decoration:none}.suggestions-result-current a.mw-searchSuggest-link,.suggestions-result-current a.mw-searchSuggest-link:hover,.suggestions-result-current a.mw-searchSuggest-link:active,.suggestions-result-current a.mw-searchSuggest-link:focus{color:#fff}.suggestions a.mw-searchSuggest-link .special-query{ overflow:hidden;text-overflow:ellipsis;white-space:nowrap}</style><meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="Helper%20types%20-%20Free%20Pascal%20wiki_files/load_002.css">
+<meta name="generator" content="MediaWiki 1.31.7">
+<link rel="shortcut icon" href="https://wiki.freepascal.org/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.freepascal.org/opensearch_desc.php" title="Free Pascal wiki (en)">
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.freepascal.org/api.php?action=rsd">
+<link rel="license" href="https://sourceforge.net/">
+<link rel="alternate" type="application/atom+xml" title="Free Pascal wiki Atom feed" href="https://wiki.freepascal.org/index.php?title=Special:RecentChanges&amp;feed=atom">
+<!--[if lt IE 9]><script src="/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=MonoBook&amp;sync=1"></script><![endif]-->
+<script src="Helper%20types%20-%20Free%20Pascal%20wiki_files/load.php"></script><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style></head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Helper_types rootpage-Helper_types skin-monobook action-view"><div id="MathJax_Message" style="display: none;"></div><div id="globalWrapper"><div id="column-content"><div id="content" class="mw-body" role="main"><a id="top"></a><div class="mw-indicators mw-body-content">
+</div>
+<h1 id="firstHeading" class="firstHeading" lang="en">Helper types</h1><div id="bodyContent" class="mw-body-content"><div id="siteSub">From Free Pascal wiki</div><div id="contentSub" dir="ltr" lang="en"></div><div id="jump-to-nav" class="mw-jump">Jump to:<a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div><!-- start content --><div id="mw-content-text" dir="ltr" class="mw-content-ltr" lang="en"><div class="mw-parser-output"><p>Helper "types" allow you to extend the scope in which the compiler searches for symbols.
+This page describes helper types in Object Pascal. For the equivalent in Objective Pascal see <a href="https://wiki.freepascal.org/FPC_PasCocoa#Category_declaration" title="FPC PasCocoa">here</a>.
+</p>
+<div id="toc" class="toc"><div class="toctitle" dir="ltr" lang="en"><h2>Contents</h2><span class="toctoggle">&nbsp;[<a role="button" tabindex="0" class="togglelink">hide</a>]&nbsp;</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#General"><span class="tocnumber">1</span> <span class="toctext">General</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Declaration"><span class="tocnumber">2</span> <span class="toctext">Declaration</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Syntax"><span class="tocnumber">2.1</span> <span class="toctext">Syntax</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Implementation"><span class="tocnumber">2.2</span> <span class="toctext">Implementation</span></a>
+<ul>
+<li class="toclevel-3 tocsection-5"><a href="#Inherited_with_function_name"><span class="tocnumber">2.2.1</span> <span class="toctext">Inherited with function name</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#Inherited_without_function_name"><span class="tocnumber">2.2.2</span> <span class="toctext">Inherited without function name</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-7"><a href="#Restrictions"><span class="tocnumber">2.3</span> <span class="toctext">Restrictions</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Inheritance"><span class="tocnumber">2.4</span> <span class="toctext">Inheritance</span></a>
+<ul>
+<li class="toclevel-3 tocsection-9"><a href="#Class_Helper"><span class="tocnumber">2.4.1</span> <span class="toctext">Class Helper</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#Record_Helper"><span class="tocnumber">2.4.2</span> <span class="toctext">Record Helper</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#Type_Helper"><span class="tocnumber">2.4.3</span> <span class="toctext">Type Helper</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-12"><a href="#Example"><span class="tocnumber">2.5</span> <span class="toctext">Example</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#Usage"><span class="tocnumber">3</span> <span class="toctext">Usage</span></a>
+<ul>
+<li class="toclevel-2 tocsection-14"><a href="#Scope"><span class="tocnumber">3.1</span> <span class="toctext">Scope</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Method_hiding"><span class="tocnumber">3.2</span> <span class="toctext">Method hiding</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Restrictions_2"><span class="tocnumber">3.3</span> <span class="toctext">Restrictions</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-17"><a href="#Differences"><span class="tocnumber">4</span> <span class="toctext">Differences</span></a>
+<ul>
+<li class="toclevel-2 tocsection-18"><a href="#Differences_between_mode_Delphi_and_ObjFPC"><span class="tocnumber">4.1</span> <span class="toctext">Differences between mode Delphi and ObjFPC</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Differences_between_Delphi_and_FPC"><span class="tocnumber">4.2</span> <span class="toctext">Differences between Delphi and FPC</span></a>
+<ul>
+<li class="toclevel-3 tocsection-20"><a href="#Root_type"><span class="tocnumber">4.2.1</span> <span class="toctext">Root type</span></a></li>
+<li class="toclevel-3 tocsection-21"><a href="#inherited"><span class="tocnumber">4.2.2</span> <span class="toctext">inherited</span></a></li>
+<li class="toclevel-3 tocsection-22"><a href="#RTTI"><span class="tocnumber">4.2.3</span> <span class="toctext">RTTI</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-23"><a href="#Code_examples"><span class="tocnumber">5</span> <span class="toctext">Code examples</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="#Multi-scope_helpers"><span class="tocnumber">6</span> <span class="toctext">Multi-scope helpers</span></a>
+<ul>
+<li class="toclevel-2 tocsection-25"><a href="#Order.2FPrecedence"><span class="tocnumber">6.1</span> <span class="toctext">Order/Precedence</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="#Inherited_2"><span class="tocnumber">6.2</span> <span class="toctext">Inherited</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="General">General</span></h2>
+<p>Class and Record helpers are available since the release of FPC 2.6, Type helpers since the release of FPC 3.0.
+</p>
+<h2><span class="mw-headline" id="Declaration">Declaration</span></h2>
+<p>Helper types (which are <b>not</b> themselves concrete types of any 
+kind despite appearing as such, and in fact amount to "syntactic sugar")
+ allow you to extend a given class, interface, record or primitive type 
+with additional functionality. So you can add
+</p>
+<ul><li>properties</li>
+<li>enumerators</li>
+<li>wrappers for existing functionality</li>
+<li>class vars and const</li>
+<li>local types</li>
+<li>constructors, class constructors, class destructors.</li></ul>
+<p>You cannot add new fields.
+</p>
+<h3><span class="mw-headline" id="Syntax">Syntax</span></h3>
+<p>Currently helper types can be used to extend classes (<i>class helper</i>), records (<i>record helper</i>) and (primitive) types (<i>type helper</i>) as those are supported by Delphi as well. Additionally, they can extend interfaces, (<i>type helper</i>) which is functionality unique to FPC.
+</p><p>The general syntax for helper types is the following:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>HelperName = class|record|type helper[(OptionalBaseHelper)] for TypeName
+  [properties, procedures, functions, constructors, consts, vars]
+end [hint modifiers];
+</pre></div>
+<p>The sequence <i>class helper</i> declares a helper for a class, <i>record helper</i> declares a helper for a record while <i>type helper</i> declares a helper for a primitive type. The inheritance <i>(BaseHelper)</i> is optional.
+</p><p><i>HelperName</i>, <i>BaseHelper</i> and <i>TypeName</i> have to be valid Pascal identifiers. In case of a class helper <i>TypeName</i> must be a class and <i>BaseHelper</i> must be another class helper that extends either the same class as <i>TypeName</i> or a parent class of it. For record helpers <i>TypeName</i> must be a record and <i>BaseHelper</i>
+ must be a record helper that extend the same record type.
+The declarations inside a helper are very similiar to the declaration of
+ a normal class, but you must not use fields, destructors and class 
+constructors/destructors.
+</p><p><i>Note</i>:
+In mode ObjFPC record helpers need the modeswitch <i>advancedrecords</i> to be declared; in mode Delphi no further modeswitch is necessary. For type helpers the modeswitch <i>typehelpers</i> is required.
+</p>
+<h3><span class="mw-headline" id="Implementation">Implementation</span></h3>
+<p>The rules when implementing a helper are a bit differently then when 
+implementing a normal class or record. First of the type of <i>Self</i> is always of the type of the extended type (e.g. <i>TObject</i> in case of a helper declared as <i>class helper for TObject</i>).
+</p><p>If a method is not defined in the helper type itself it is 
+</p>
+<ol><li>first searched in all the ancestor helpers of the current helper</li>
+<li>then in the extended type (helper for),</li>
+<li>and then (for class helpers) in the ancestors of the extended class.
+ Please note that if there is a helper for an ancestor it is searched 
+right before the ancestor class itself is searched.</li></ol>
+<h4><span class="mw-headline" id="Inherited_with_function_name">Inherited with function name</span></h4>
+<p>The <b>inherited FuncName;</b> skips the ancestors of the helper and 
+starts searching in the extended type, then it proceeds normally, i.e. 
+if the extended type has an ancestor the compiler searches in the helper
+ for the ancestor of the extended type (if available), then in the 
+ancestor of the extended type (if available), and so forth.
+</p>
+<h4><span class="mw-headline" id="Inherited_without_function_name">Inherited without function name</span></h4>
+<p>The <b>inherited;</b> without an explicit name can be a bit confusing:
+</p>
+<ul><li>FPC 3.3.1 and below searches first in the extended type then 
+proceeds normally. That means it skips the helper and its ancestors. 
+$mode objfpc and delphi!</li>
+<li>Delphi even skips the extended type and searches in the helper for 
+the ancestor of the extended type (if available), then in the ancestor 
+of the extended type (if available). That means it skips the helper, its
+ ancestors and the extended type.</li></ul>
+<h3><span class="mw-headline" id="Restrictions">Restrictions</span></h3>
+<p>A helper type may not
+</p>
+<ul><li>contain (class) destructors (except in trunk FPC 3.3.1)</li>
+<li>contain class constructors (except in trunk FPC 3.3.1)</li>
+<li>contain fields</li>
+<li>contain abstract methods</li>
+<li>"override" virtual methods of the extended class (they can be hidden by the helper though)</li></ul>
+<p>Methods of the extended type can be overloaded (thus they are not hidden by the helper) by using the <i>overload</i> keyword.
+</p><p>Example:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="cm">{$mode objfpc}</span>
+<span class="cm">{$MODESWITCH ADVANCEDRECORDS}</span>
+
+<span class="n">TObjectHelper</span> <span class="o">=</span> <span class="k">class</span> <span class="n">helper</span> <span class="k">for</span> <span class="kt">TObject</span>
+  <span class="k">function</span> <span class="nf">ToString</span><span class="p">(</span><span class="k">const</span> <span class="n">aFormat</span><span class="o">:</span> <span class="k">String</span><span class="p">)</span><span class="o">:</span> <span class="k">String</span><span class="o">;</span> <span class="n">overload</span><span class="o">;</span>
+<span class="k">end</span><span class="o">;</span>
+
+<span class="k">function</span> <span class="nc">TObjectHelper</span><span class="o">.</span><span class="nf">ToString</span><span class="p">(</span><span class="k">const</span> <span class="n">aFormat</span><span class="o">:</span> <span class="k">String</span><span class="p">)</span><span class="o">:</span> <span class="k">String</span><span class="o">;</span>
+<span class="k">begin</span>
+  <span class="bp">Result</span> <span class="o">:=</span> <span class="nb">Format</span><span class="p">(</span><span class="n">aFormat</span><span class="o">,</span> <span class="p">[</span><span class="n">ToString</span><span class="p">])</span><span class="o">;</span>
+<span class="k">end</span><span class="o">;</span>
+
+<span class="k">var</span>
+  <span class="n">o</span><span class="o">:</span> <span class="kt">TObject</span><span class="o">;</span>
+<span class="k">begin</span>
+  <span class="nb">Writeln</span><span class="p">(</span><span class="n">o</span><span class="o">.</span><span class="n">ToString</span><span class="p">(</span><span class="s">'The object</span><span class="se">''</span><span class="s">s name is %s'</span><span class="p">))</span><span class="o">;</span>
+<span class="k">end</span><span class="o">.</span>
+</pre></div>
+<h3><span class="mw-headline" id="Inheritance">Inheritance</span></h3>
+<p>So-called "inheritance" for helper types fulfills two purposes:
+</p>
+<ul><li>use the methods of multiple helpers at once</li>
+<li>(class helpers only) bring methods that were added to a parent class
+ to the topmost visibility (because equally named methods of helpers are
+ hidden by subclasses)</li></ul>
+<h4><span class="mw-headline" id="Class_Helper">Class Helper</span></h4>
+<p>A class helper can inherit from another class helper if it extends a 
+subclass of the class or the same class which is extend by the parent 
+class helper.
+</p><p>Example:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">TObjectHelper</span> <span class="o">=</span> <span class="k">class</span> <span class="n">helper</span> <span class="k">for</span> <span class="kt">TObject</span>
+  <span class="k">procedure</span> <span class="nf">SomeMethod</span><span class="o">;</span>
+<span class="k">end</span><span class="o">;</span>
+
+<span class="n">TFoo</span> <span class="o">=</span> <span class="k">class</span><span class="p">(</span><span class="kt">TObject</span><span class="p">)</span>
+<span class="k">end</span><span class="o">;</span>
+
+<span class="n">TFooHelper</span> <span class="o">=</span> <span class="k">class</span> <span class="n">helper</span><span class="p">(</span><span class="n">TObjectHelper</span><span class="p">)</span> <span class="k">for</span> <span class="n">TFoo</span>
+<span class="k">end</span><span class="o">;</span>
+</pre></div>
+<h4><span class="mw-headline" id="Record_Helper">Record Helper</span></h4>
+<p>A record helper can inherit from another record helper if it extends 
+the same record which is extend by the parent record helper.
+<b>Important</b>:
+Inheritance for record helpers is not enabled in mode Delphi, because there this is not allowed.
+</p><p>Example:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">TTest</span> <span class="o">=</span> <span class="k">record</span>
+<span class="k">end</span><span class="o">;</span>
+
+<span class="n">TTestHelper</span> <span class="o">=</span> <span class="k">record</span> <span class="n">helper</span> <span class="k">for</span> <span class="n">TTest</span>
+  <span class="k">procedure</span> <span class="nf">SomeMethod</span><span class="o">;</span>
+<span class="k">end</span><span class="o">;</span>
+
+<span class="n">TTestHelperSub</span> <span class="o">=</span> <span class="k">record</span> <span class="n">helper</span><span class="p">(</span><span class="n">TTestHelper</span><span class="p">)</span> <span class="k">for</span> <span class="n">TTest</span>
+<span class="k">end</span><span class="o">;</span>
+</pre></div>
+<h4><span class="mw-headline" id="Type_Helper">Type Helper</span></h4>
+<p>A type helper can inherit from another type helper if it extends the same type which is extended by the parent type helper.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="cm">{$modeswitch TypeHelpers}</span>
+
+<span class="n">TTypeHelper</span> <span class="o">=</span> <span class="k">type</span> <span class="n">helper</span> <span class="k">for</span> <span class="kt">Integer</span>
+  <span class="k">procedure</span> <span class="nf">SetZero</span><span class="o">;</span>
+<span class="k">end</span><span class="o">;</span>
+ 
+<span class="n">TTypeHelperSub</span> <span class="o">=</span> <span class="k">type</span> <span class="n">helper</span><span class="p">(</span><span class="n">TTypeHelper</span><span class="p">)</span> <span class="k">for</span> <span class="kt">integer</span>
+<span class="k">end</span><span class="o">;</span>
+
+<span class="k">implementation</span>
+
+<span class="k">procedure</span> <span class="nc">TTypeHelper</span><span class="o">.</span><span class="nf">SetZero</span><span class="o">;</span>
+<span class="k">begin</span>
+  <span class="k">self</span><span class="o">:=</span> <span class="mi">0</span><span class="o">;</span>
+<span class="k">end</span><span class="o">;</span>
+</pre></div>
+<p>Since the introduction, type helpers can for example be found in section <a class="external text" href="https://www.freepascal.org/docs-html/rtl/sysutils/typehelpers.html">type helpers</a> of unit sysutils.
+</p>
+<h3><span class="mw-headline" id="Example">Example</span></h3>
+<p>A simple example for extending existing functionality is the following:
+The LCL's <i>TCheckListBox</i>, which is a list with checkboxes, does 
+not provide a property to get the count of all checked items. Using a 
+class helper this can be added rather easily.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="k">type</span>
+  <span class="n">TCheckListBoxHelper</span> <span class="o">=</span> <span class="k">class</span> <span class="n">helper</span> <span class="k">for</span> <span class="n">TCheckListBox</span>
+  <span class="kp">private</span>
+    <span class="k">function</span> <span class="nf">GetCheckedCount</span><span class="o">:</span> <span class="kt">Integer</span><span class="o">;</span>
+  <span class="kp">public</span>
+    <span class="k">property</span> <span class="py">CheckedCount</span><span class="o">:</span> <span class="kt">Integer</span> <span class="kp">read</span> <span class="nf">GetCheckedCount</span><span class="o">;</span>
+  <span class="k">end</span><span class="o">;</span>
+
+<span class="k">function</span> <span class="nc">TCheckListBoxHelper</span><span class="o">.</span><span class="nf">GetCheckedCount</span><span class="o">:</span> <span class="kt">Integer</span><span class="o">;</span>
+<span class="k">var</span>
+  <span class="n">i</span><span class="o">:</span> <span class="kt">Integer</span><span class="o">;</span>
+<span class="k">begin</span>
+  <span class="bp">Result</span> <span class="o">:=</span> <span class="mi">0</span><span class="o">;</span>
+  <span class="k">for</span> <span class="n">i</span> <span class="o">:=</span> <span class="mi">0</span> <span class="k">to</span> <span class="n">Items</span><span class="o">.</span><span class="n">Count</span> <span class="o">-</span> <span class="mi">1</span> <span class="k">do</span>
+    <span class="k">if</span> <span class="n">Checked</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">then</span>
+      <span class="nb">Inc</span><span class="p">(</span><span class="bp">Result</span><span class="p">)</span><span class="o">;</span>
+<span class="k">end</span><span class="o">;</span>
+
+<span class="c1">// somewhere else (TCheckListBoxHelper needs to be in scope)</span>
+<span class="k">if</span> <span class="n">MyCheckList</span><span class="o">.</span><span class="n">CheckedCount</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">then</span> <span class="o">...</span>
+</pre></div>
+<p>Please note that it's not trivial to implement a cached variation, as helper types can't introduce fields.
+</p>
+<h2><span class="mw-headline" id="Usage">Usage</span></h2>
+<h3><span class="mw-headline" id="Scope">Scope</span></h3>
+<p>The methods declared inside the helper are always available once it 
+is in scope and can be called as if they'd belong to the extended type.
+</p><p>Example:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="k">type</span>
+  <span class="n">TObjectHelper</span> <span class="o">=</span> <span class="k">class</span> <span class="n">helper</span> <span class="k">for</span> <span class="kt">TObject</span>
+    <span class="k">function</span> <span class="nf">TheAnswer</span><span class="o">:</span> <span class="kt">Integer</span><span class="o">;</span>
+  <span class="k">end</span><span class="o">;</span>
+
+<span class="k">function</span> <span class="nc">TObjectHelper</span><span class="o">.</span><span class="nf">TheAnswer</span><span class="o">:</span> <span class="kt">Integer</span><span class="o">;</span>
+<span class="k">begin</span>
+  <span class="bp">Result</span> <span class="o">:=</span> <span class="mi">42</span><span class="o">;</span>
+<span class="k">end</span><span class="o">;</span>
+
+<span class="k">begin</span>
+  <span class="n">o</span> <span class="o">:=</span> <span class="kt">TObject</span><span class="o">.</span><span class="n">Create</span><span class="o">;</span>
+  <span class="n">o</span><span class="o">.</span><span class="n">TheAnswer</span><span class="o">;</span>
+<span class="k">end</span><span class="o">.</span>
+</pre></div>
+<p>By default, only one helper type can be active for a type at the same
+ time. This helper is always the last one that is in scope (which 
+follows the usual rules of Pascal).
+</p><p>Example:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="k">type</span>
+  <span class="n">TTestRecord</span> <span class="o">=</span> <span class="k">record</span>
+  <span class="k">end</span><span class="o">;</span>
+  <span class="n">TTestClass</span> <span class="o">=</span> <span class="k">class</span>
+  <span class="k">end</span><span class="o">;</span>
+
+  <span class="n">TTestRecordHelper</span> <span class="o">=</span> <span class="k">record</span> <span class="n">helper</span> <span class="k">for</span> <span class="n">TTestRecord</span>
+    <span class="k">procedure</span> <span class="nf">Test</span><span class="o">;</span>
+  <span class="k">end</span><span class="o">;</span>
+
+  <span class="n">TTestClassHelper1</span> <span class="o">=</span> <span class="k">class</span> <span class="n">helper</span> <span class="k">for</span> <span class="n">TTestClass</span>
+    <span class="k">procedure</span> <span class="nf">Test1</span><span class="o">;</span>
+  <span class="k">end</span><span class="o">;</span>
+
+  <span class="n">TTestClassHelper2</span> <span class="o">=</span> <span class="k">class</span> <span class="n">helper</span> <span class="k">for</span> <span class="n">TTestClass</span>
+    <span class="k">procedure</span> <span class="nf">Test2</span><span class="o">;</span>
+  <span class="k">end</span><span class="o">;</span>
+
+<span class="k">var</span>
+  <span class="n">tr</span><span class="o">:</span> <span class="n">TTestRecord</span><span class="o">;</span>
+  <span class="n">tc</span><span class="o">:</span> <span class="n">TTestClass</span><span class="o">;</span>
+<span class="k">begin</span>
+  <span class="n">tr</span><span class="o">.</span><span class="n">Test</span><span class="o">;</span> <span class="c1">// this compiles</span>
+  <span class="n">tc</span><span class="o">.</span><span class="n">Test1</span><span class="o">;</span> <span class="c1">// this won't compile</span>
+  <span class="n">tc</span><span class="o">.</span><span class="n">Test2</span><span class="o">;</span> <span class="c1">// this compiles</span>
+<span class="k">end</span><span class="o">.</span>
+</pre></div>
+<h3><span class="mw-headline" id="Method_hiding">Method hiding</span></h3>
+<p>The methods of helper types hide the methods declared in the extended type as long as they are not declared with "overload". 
+</p><p>If a class helper is in scope for a parent class then only the 
+methods of the parent class are hidden while the methods of the subclass
+ will stay visible.
+</p><p>Example:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="k">type</span>
+  <span class="n">TTest</span> <span class="o">=</span> <span class="k">class</span>
+    <span class="k">procedure</span> <span class="nf">Test</span><span class="o">;</span>
+  <span class="k">end</span><span class="o">;</span>
+  <span class="n">TTestSub</span> <span class="o">=</span> <span class="k">class</span><span class="p">(</span><span class="n">TTest</span><span class="p">)</span>
+    <span class="k">procedure</span> <span class="nf">Test</span><span class="o">;</span>
+  <span class="k">end</span><span class="o">;</span>
+
+  <span class="n">TTestHelper</span> <span class="o">=</span> <span class="k">class</span> <span class="n">helper</span> <span class="k">for</span> <span class="n">TTest</span>
+    <span class="k">procedure</span> <span class="nf">Test</span><span class="o">;</span>
+  <span class="k">end</span><span class="o">;</span>
+
+<span class="k">var</span>
+  <span class="n">t</span><span class="o">:</span> <span class="n">TTest</span><span class="o">;</span>
+  <span class="n">ts</span><span class="o">:</span> <span class="n">TTestSub</span><span class="o">;</span>
+<span class="k">begin</span>
+  <span class="n">t</span><span class="o">.</span><span class="n">Test</span><span class="o">;</span> <span class="c1">// this calls "Test" of the helper</span>
+  <span class="n">ts</span><span class="o">.</span><span class="n">Test</span><span class="o">;</span> <span class="c1">// this calls "Test" of TTestSub</span>
+<span class="k">end</span><span class="o">.</span>
+</pre></div>
+<p>Here is another example to explain the search order:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="k">type</span>
+  <span class="n">TAnimal</span> <span class="o">=</span> <span class="k">class</span> <span class="o">...</span> <span class="k">end</span><span class="o">;</span>
+  <span class="n">TBird</span> <span class="o">=</span> <span class="k">class</span> <span class="o">...</span> <span class="k">end</span><span class="o">;</span>
+  <span class="n">TAnimalHelper</span> <span class="o">=</span> <span class="k">class</span> <span class="n">helper</span> <span class="k">for</span> <span class="n">TAnimal</span> <span class="o">...</span> <span class="k">end</span><span class="o">;</span>
+  <span class="n">TBirdHelper</span> <span class="o">=</span> <span class="k">class</span> <span class="n">helper</span> <span class="k">for</span> <span class="n">TBird</span> <span class="o">...</span> <span class="k">end</span><span class="o">;</span>
+  <span class="n">TEagleHelper</span> <span class="o">=</span> <span class="k">class</span> <span class="n">helper</span><span class="p">(</span><span class="n">TBirdHelper</span><span class="p">)</span> <span class="k">for</span> <span class="n">TBird</span> <span class="o">...</span><span class="k">end</span><span class="o">;</span>
+<span class="k">var</span> <span class="n">b</span><span class="o">:</span> <span class="n">TBird</span><span class="o">;</span>
+<span class="k">begin</span>
+  <span class="n">b</span><span class="o">.</span><span class="n">Name</span><span class="o">;</span>
+<span class="k">end</span><span class="o">;</span>
+</pre></div>
+<p>The compiler searches <i>Name</i> in this order: TEagleHelper, TBirdHelper, TBird, TAnimalHelper, TAnimal.
+</p>
+<h3><span class="mw-headline" id="Restrictions_2">Restrictions</span></h3>
+<p>You can not reference helper types anywhere in the code except for the following cases:
+</p>
+<ul><li>inheriting from one</li>
+<li>using one in (Bit)SizeOf</li>
+<li>using one in TypeInfo</li></ul>
+<h2><span class="mw-headline" id="Differences">Differences</span></h2>
+<h3><span class="mw-headline" id="Differences_between_mode_Delphi_and_ObjFPC">Differences between mode Delphi and ObjFPC</span></h3>
+<p>In mode Delphi you can use <i>virtual</i>, <i>dynamic</i>, <i>override</i> and <i>message</i>
+ identifiers. As the concepts behind those identifiers (virtual methods,
+ message dispatching) isn't applicable for helpers, those keywords are 
+ignored in mode Delphi and not allowed in mode ObjFPC.
+</p><p>In mode Delphi you can't inherit a record helper from another one
+ and you can not use the "inherited" keyword (not even to call the 
+method of the extended record).
+</p>
+<h3><span class="mw-headline" id="Differences_between_Delphi_and_FPC">Differences between Delphi and FPC</span></h3>
+<p>While the helper feature was implemented as Delphi compatible as possible there are some differences between the two:<br>
+</p>
+<h4><span class="mw-headline" id="Root_type">Root type</span></h4>
+<p>In Delphi a helper is basically a class which inherits from a class <i>TClassHelperBase</i> (both class and record helpers) which in turn inherits from <i>TInterfacedObject</i>. In FPC helpers are a type for themselves and don't have a basetype.<br>
+As this difference is only visible in the RTTI (which is seldom used for helpers) this difference was considered negligible.
+</p>
+<h4><span class="mw-headline" id="inherited">inherited</span></h4>
+<p>See <a href="https://wiki.freepascal.org/Helper_types#Inherited_without_function_name" title="Helper types">Inherited</a>
+</p>
+<h4><span class="mw-headline" id="RTTI">RTTI</span></h4>
+<p>Because helpers are their own type in FPC they also have a custom type kind (<i>tkHelper</i>) and their own fields in TTypeData:
+</p>
+<ul><li>HelperParent: a PTypeInfo field that points to the type info of the parent helper (can be <b>nil</b>)</li>
+<li>ExtendedInfo: a PTypeInfo field that points to the type info of the extended type</li>
+<li>HelperProps: contains the count of the (published) properties the helper contains</li>
+<li>HelperUnit: contains the name of the unit the helper is defined in<br></li></ul>
+<p>The usual RTTI methods can be used to query for properties of the helper.
+</p><p><i>Note</i>:
+<i>ExtendedInfo</i> and <i>HelperUnit</i> don't have a Delphi equivalent.
+</p><p>Example:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="k">type</span>
+  <span class="n">TObjectHelper</span> <span class="o">=</span> <span class="k">class</span> <span class="n">helper</span> <span class="k">for</span> <span class="kt">TObject</span>
+  <span class="k">end</span><span class="o">;</span>
+
+<span class="k">var</span>
+  <span class="n">ti</span><span class="o">:</span> <span class="n">PTypeInfo</span><span class="o">;</span>
+  <span class="n">td</span><span class="o">:</span> <span class="n">PTypeInfo</span><span class="o">;</span>
+<span class="k">begin</span>
+  <span class="n">ti</span> <span class="o">:=</span> <span class="nb">TypeInfo</span><span class="p">(</span><span class="n">TObjectHelper</span><span class="p">)</span><span class="o">;</span>
+  <span class="n">td</span> <span class="o">:=</span> <span class="n">GetTypeData</span><span class="p">(</span><span class="n">ti</span><span class="p">)</span><span class="o">;</span>
+<span class="cm">{$ifdef fpc}</span>
+<span class="c1">// you must use this in FPC</span>
+<span class="k">if</span> <span class="n">ti</span><span class="o">^.</span><span class="n">Kind</span> <span class="o">=</span> <span class="n">tkHelper</span> <span class="k">then</span> <span class="k">begin</span>
+  <span class="k">if</span> <span class="nb">Assigned</span><span class="p">(</span><span class="n">td</span><span class="o">^.</span><span class="n">HelperParent</span><span class="p">)</span> <span class="k">then</span>
+    <span class="nb">Writeln</span><span class="p">(</span><span class="n">td</span><span class="o">^.</span><span class="n">HelperParent</span><span class="o">^.</span><span class="n">Name</span><span class="p">)</span>
+  <span class="k">else</span>
+    <span class="nb">Writeln</span><span class="p">(</span><span class="s">'no helper parent'</span><span class="p">)</span><span class="o">;</span>
+  <span class="nb">Writeln</span><span class="p">(</span><span class="n">td</span><span class="o">^.</span><span class="n">ExtendedInfo</span><span class="o">^.</span><span class="n">Name</span><span class="p">)</span><span class="o">;</span>
+  <span class="nb">Writeln</span><span class="p">(</span><span class="n">td</span><span class="o">^.</span><span class="n">HelperProps</span><span class="p">)</span><span class="o">;</span>
+  <span class="nb">Writeln</span><span class="p">(</span><span class="n">td</span><span class="o">^.</span><span class="n">HelperUnit</span><span class="p">)</span><span class="o">;</span>
+<span class="k">end</span><span class="o">;</span>
+<span class="cm">{$else}</span>
+<span class="c1">// you must use this in Delphi</span>
+<span class="k">if</span> <span class="n">ti</span><span class="o">^.</span><span class="n">Kind</span> <span class="o">=</span> <span class="n">tkHelper</span> <span class="k">then</span> <span class="k">begin</span>
+  <span class="k">if</span> <span class="n">td</span><span class="o">^.</span><span class="n">ParentInfo</span> <span class="o">&lt;&gt;</span> <span class="nb">TypeInfo</span><span class="p">(</span><span class="n">TClassHelperBase</span><span class="p">)</span> <span class="k">then</span>
+    <span class="nb">Writeln</span><span class="p">(</span><span class="n">td</span><span class="o">^.</span><span class="n">HelperParent</span><span class="o">^.</span><span class="n">Name</span><span class="p">)</span>
+  <span class="k">else</span>
+    <span class="nb">Writeln</span><span class="p">(</span><span class="s">'no helper parent'</span><span class="p">)</span><span class="o">;</span>
+  <span class="nb">Writeln</span><span class="p">(</span><span class="n">td</span><span class="o">^.</span><span class="n">PropCount</span><span class="p">)</span><span class="o">;</span>
+<span class="k">end</span><span class="o">;</span>
+<span class="cm">{$endif}</span>  
+<span class="k">end</span><span class="o">.</span>
+</pre></div>
+<h2><span class="mw-headline" id="Code_examples">Code examples</span></h2>
+<p>The following table lists some examples for class helpers found on 
+the web and whether they work with the current implementation.
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th>URL</th>
+<th>State
+</th></tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="http://wiert.wordpress.com/2009/05/07/delphi-class-helper-to-add-for-%E2%80%A6-in-support-for-tcomponentcomponentscomponentcount/">Class helper to add for ... in support for TComponent.Components / ComponentCount</a></td>
+<td>ok
+</td></tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="http://delphi.about.com/od/delphitips2008/qt/tstrings-helper.htm">Class helper for Delphi's TStrings: Implemented Add(Variant)</a></td>
+<td>ok
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Multi-scope_helpers">Multi-scope helpers</span></h2>
+<p>In trunk FPC, it is possible to allow all helpers of a type to be in 
+scope at the same time instead of only the last one found, which can be 
+enabled with {$modeswitch multiscopehelpers}
+</p>
+<h3><span id="Order/Precedence"></span><span class="mw-headline" id="Order.2FPrecedence">Order/Precedence</span></h3>
+<p>With multihelpers disabled (the default) the compiler searches in the
+ last matching helper and its ancestors and then in the extended type.
+</p><p>With multihelpers enabled the compiler searches in the last 
+matching helper and its ancestors, then in the earlier matching 
+helper(s) and its ancestors and then in the extended type.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="cm">{$modeswitch multihelpers}</span>
+<span class="k">type</span>
+  <span class="n">TAnimal</span> <span class="o">=</span> <span class="k">class</span> <span class="o">...</span> <span class="k">end</span><span class="o">;</span>
+  <span class="n">TBird</span> <span class="o">=</span> <span class="k">class</span> <span class="o">...</span> <span class="k">end</span><span class="o">;</span>
+  <span class="n">TAnimalHelper</span> <span class="o">=</span> <span class="k">class</span> <span class="n">helper</span> <span class="k">for</span> <span class="n">TAnimal</span> <span class="o">...</span> <span class="k">end</span><span class="o">;</span>
+  <span class="n">TBirdHelper</span> <span class="o">=</span> <span class="k">class</span> <span class="n">helper</span> <span class="k">for</span> <span class="n">TBird</span> <span class="o">...</span> <span class="k">end</span><span class="o">;</span>
+  <span class="n">TExtBirdHelper</span> <span class="o">=</span> <span class="k">class</span> <span class="n">helper</span> <span class="k">for</span> <span class="n">TBird</span> <span class="o">...</span> <span class="k">end</span><span class="o">;</span>
+  <span class="n">TEagleHelper</span> <span class="o">=</span> <span class="k">class</span> <span class="n">helper</span><span class="p">(</span><span class="n">TBirdHelper</span><span class="p">)</span> <span class="k">for</span> <span class="n">TBird</span> <span class="o">...</span><span class="k">end</span><span class="o">;</span>
+<span class="k">var</span> <span class="n">b</span><span class="o">:</span> <span class="n">TBird</span><span class="o">;</span>
+<span class="k">begin</span>
+  <span class="n">b</span><span class="o">.</span><span class="n">Name</span><span class="o">;</span>
+<span class="k">end</span><span class="o">;</span>
+</pre></div>
+<p>The compiler searches <i>Name</i> in this order: TEagleHelper, TBirdHelper, TExtBirdHelper, TBird, TAnimalHelper, TAnimal.
+</p>
+<h3><span class="mw-headline" id="Inherited_2">Inherited</span></h3>
+<p><b>inherited</b> keyword works the same with multihelpers.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20200412205018
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.073 seconds
+Real time usage: 2.145 seconds
+Preprocessor visited node count: 213/1000000
+Preprocessor generated node count: 352/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 20489/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key lazaruswiki:pcache:idhash:6152-0!canonical and timestamp 20200412205015 and revision id 128287
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://wiki.freepascal.org/index.php?title=Helper_types&amp;oldid=128287">https://wiki.freepascal.org/index.php?title=Helper_types&amp;oldid=128287</a>"</div>
+<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://wiki.freepascal.org/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="https://wiki.freepascal.org/Category:Data_types" title="Category:Data types">Data types</a></li></ul></div></div><!-- end content --><div class="visualClear"></div></div></div></div><div id="column-one" dir="ltr" lang="en"><h2>Navigation menu</h2><div role="navigation" class="portlet" id="p-cactions" aria-labelledby="p-cactions-label"><h3 id="p-cactions-label" dir="ltr" lang="en">Views</h3><div class="pBody"><ul dir="ltr" lang="en"><li id="ca-nstab-main" class="selected"><a href="https://wiki.freepascal.org/Helper_types" title="View the content page [Alt+Shift+c]" accesskey="c">Page</a></li><li id="ca-talk" class="new"><a href="https://wiki.freepascal.org/index.php?title=Talk:Helper_types&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [Alt+Shift+t]" accesskey="t">Discussion</a></li><li id="ca-viewsource"><a href="https://wiki.freepascal.org/index.php?title=Helper_types&amp;action=edit" title="This page is protected.
+You can view its source [Alt+Shift+e]" accesskey="e">View source</a></li><li id="ca-history"><a href="https://wiki.freepascal.org/index.php?title=Helper_types&amp;action=history" title="Past revisions of this page [Alt+Shift+h]" accesskey="h">History</a></li></ul></div></div><div role="navigation" class="portlet" id="p-personal" aria-labelledby="p-personal-label"><h3 id="p-personal-label" dir="ltr" lang="en">Personal tools</h3><div class="pBody"><ul dir="ltr" lang="en"><li id="pt-createaccount"><a href="https://wiki.freepascal.org/index.php?title=Special:CreateAccount&amp;returnto=Helper+types" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://wiki.freepascal.org/index.php?title=Special:UserLogin&amp;returnto=Helper+types" title="You are encouraged to log in; however, it is not mandatory [Alt+Shift+o]" accesskey="o">Log in</a></li></ul></div></div><div class="portlet" id="p-logo" role="banner"><a href="https://www.freepascal.org/" class="mw-wiki-logo" title="Visit the main page"></a></div><div role="navigation" class="portlet generated-sidebar" id="p-navigation" aria-labelledby="p-navigation-label"><h3 id="p-navigation-label" dir="ltr" lang="en">Navigation</h3><div class="pBody"><ul dir="ltr" lang="en"><li id="n-mainpage"><a href="https://wiki.freepascal.org/Main_Page" title="Visit the main page [Alt+Shift+z]" accesskey="z">Main Page</a></li><li id="n-documentation"><a href="https://wiki.freepascal.org/Lazarus_Documentation">Documentation</a></li><li id="n-FAQ"><a href="https://wiki.freepascal.org/Lazarus_Faq">FAQ</a></li><li id="n-downloads"><a href="https://wiki.freepascal.org/Components_and_Code_examples">Downloads</a></li><li id="n-glossary"><a href="https://wiki.freepascal.org/Glossary">Glossary</a></li><li id="n-index"><a href="https://wiki.freepascal.org/Special:AllPages">Index</a></li><li id="n-recentchanges"><a href="https://wiki.freepascal.org/Special:RecentChanges" title="A list of recent changes in the wiki [Alt+Shift+r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="https://wiki.freepascal.org/Special:Random" title="Load a random page [Alt+Shift+x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" rel="nofollow" title="The place to find out">Help</a></li></ul></div></div><div role="search" class="portlet" id="p-search"><h3 id="p-search-label" dir="ltr" lang="en"><label for="searchInput">Search</label></h3><div class="pBody" id="searchBody"><form action="/index.php" id="searchform"><input type="hidden" value="Special:Search" name="title"><input type="search" name="search" placeholder="Search Free Pascal wiki" title="Search Free Pascal wiki [Alt+Shift+f]" accesskey="f" id="searchInput" autocomplete="off"><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchGoButton" class="searchButton">&nbsp; <input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton"></form></div></div><div role="navigation" class="portlet" id="p-tb" aria-labelledby="p-tb-label"><h3 id="p-tb-label" dir="ltr" lang="en">Tools</h3><div class="pBody"><ul dir="ltr" lang="en"><li id="t-whatlinkshere"><a href="https://wiki.freepascal.org/Special:WhatLinksHere/Helper_types" title="A list of all wiki pages that link here [Alt+Shift+j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.freepascal.org/Special:RecentChangesLinked/Helper_types" rel="nofollow" title="Recent changes in pages linked from this page [Alt+Shift+k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="https://wiki.freepascal.org/Special:SpecialPages" title="A list of all special pages [Alt+Shift+q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.freepascal.org/index.php?title=Helper_types&amp;printable=yes" rel="alternate" title="Printable version of this page [Alt+Shift+p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.freepascal.org/index.php?title=Helper_types&amp;oldid=128287" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.freepascal.org/index.php?title=Helper_types&amp;action=info" title="More information about this page">Page information</a></li></ul></div></div></div><!-- end of the left (by default at least) column --><div class="visualClear"></div><div id="footer" role="contentinfo" dir="ltr" lang="en"><div id="f-copyrightico" class="footer-icons"><a href="https://sourceforge.net/"><img src="Helper%20types%20-%20Free%20Pascal%20wiki_files/sflogo.png" alt="" width="88" height="31"></a></div><div id="f-poweredbyico" class="footer-icons"><a href="https://www.mediawiki.org/"><img src="Helper%20types%20-%20Free%20Pascal%20wiki_files/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"></a></div><ul id="f-list"><li id="lastmod"> This page was last edited on 5 November 2019, at 16:04.</li><li id="copyright">Content is available under <a class="external" rel="nofollow" href="https://sourceforge.net/"></a> unless otherwise noted.</li><li id="privacy"><a href="https://wiki.freepascal.org/Free_Pascal_wiki:Privacy_policy" title="Free Pascal wiki:Privacy policy">Privacy policy</a></li><li id="about"><a href="https://wiki.freepascal.org/Free_Pascal_wiki:About" title="Free Pascal wiki:About">About Free Pascal wiki</a></li><li id="disclaimer"><a href="https://wiki.freepascal.org/Free_Pascal_wiki:General_disclaimer" title="Free Pascal wiki:General disclaimer">Disclaimers</a></li></ul></div></div><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.073","walltime":"2.145","ppvisitednodes":{"value":213,"limit":1000000},"ppgeneratednodes":{"value":352,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":20489,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20200412205018","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":2201});});</script>
+<div at-magnifier-wrapper=""><div class="at-theme-light"><div class="at-base notranslate" translate="no"><div class="Z1-AJ" style="top: 0px; left: 0px;"></div></div></div></div><div style="display: none; font-size: 11.4667px;" class="suggestions"><div class="suggestions-results"></div><div class="suggestions-special"></div></div></body><!-- Cached 20200412205018 --></html>

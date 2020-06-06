@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html class="client-js" dir="ltr" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>fcl-json/ru - Lazarus wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"fcl-json/ru","wgTitle":"fcl-json/ru","wgCurRevisionId":135862,"wgRevisionId":135862,"wgArticleId":13453,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Russian","FPC/ru","FCL/ru","Packages/ru","JSON/ru"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"fcl-json/ru","wgRelevantArticleId":13453,"wgRequestId":"448436d81d4858f2db2c3093","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSmjSize":110,"wgSmjUseChem":true,"wgSmjInlineMath":[["[math]","[/math]"]]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","ext.pygments":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.monobook.styles":"ready"});mw.loader.implement("user.tokens@189iure",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["ext.SmjCDN","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest"]);});</script>
+<link rel="stylesheet" href="fcl-json_ru%20-%20Lazarus%20wiki_files/load.css">
+<script async="" src="fcl-json_ru%20-%20Lazarus%20wiki_files/load_002.php"></script>
+<!--[if IE 6]><link rel="stylesheet" href="/skins/MonoBook/resources/IE60Fixes.css?303" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="/skins/MonoBook/resources/IE70Fixes.css?303" media="screen"/><![endif]-->
+<style>
+.suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:0;z-index:1099;padding:0;margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:#fff;cursor:pointer;border:1px solid #a2a9b1;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:#fff;cursor:pointer;border:1px solid #a2a9b1;padding:0;margin:0}.suggestions-result{color:#000;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left; overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.suggestions-result-current{background-color:#2a4b8d;color:#fff}.suggestions-special .special-label{color:#72777d;text-align:left}.suggestions-special .special-query{color:#000;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:#c8ccd1}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:#fff}.highlight{font-weight:bold}
+@media screen {
+	.tochidden,.toctoggle{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}.toctoggle{font-size:94%}}
+@media print {
+	.toc.tochidden,.toctoggle{display:none}}</style><style>
+.suggestions a.mw-searchSuggest-link,.suggestions a.mw-searchSuggest-link:hover,.suggestions a.mw-searchSuggest-link:active,.suggestions a.mw-searchSuggest-link:focus{color:#000;text-decoration:none}.suggestions-result-current a.mw-searchSuggest-link,.suggestions-result-current a.mw-searchSuggest-link:hover,.suggestions-result-current a.mw-searchSuggest-link:active,.suggestions-result-current a.mw-searchSuggest-link:focus{color:#fff}.suggestions a.mw-searchSuggest-link .special-query{ overflow:hidden;text-overflow:ellipsis;white-space:nowrap}</style><meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="fcl-json_ru%20-%20Lazarus%20wiki_files/load_002.css">
+<meta name="generator" content="MediaWiki 1.31.7">
+<link rel="shortcut icon" href="https://wiki.freepascal.org/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.freepascal.org/opensearch_desc.php" title="Lazarus wiki (en)">
+<script src="fcl-json_ru%20-%20Lazarus%20wiki_files/load.php"></script><link rel="EditURI" type="application/rsd+xml" href="https://wiki.lazarus.freepascal.org/api.php?action=rsd">
+<link rel="license" href="https://sourceforge.net/">
+<link rel="alternate" type="application/atom+xml" title="Lazarus wiki Atom feed" href="https://wiki.freepascal.org/index.php?title=Special:RecentChanges&amp;feed=atom">
+<!--[if lt IE 9]><script src="/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=MonoBook&amp;sync=1"></script><![endif]-->
+<style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style></head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-fcl-json_ru rootpage-fcl-json_ru skin-monobook action-view"><div id="MathJax_Message" style="display: none;"></div><div id="globalWrapper"><div id="column-content"><div id="content" class="mw-body" role="main"><a id="top"></a><div class="mw-indicators mw-body-content">
+</div>
+<h1 id="firstHeading" class="firstHeading" lang="en">fcl-json/ru</h1><div id="bodyContent" class="mw-body-content"><div id="siteSub">From Lazarus wiki</div><div id="contentSub" dir="ltr" lang="en"></div><div id="jump-to-nav" class="mw-jump">Jump to:<a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div><!-- start content --><div id="mw-content-text" dir="ltr" class="mw-content-ltr" lang="en"><div class="mw-parser-output"><p><small>
+<font color="Gray">│</font> </small><small></small>
+<small></small>
+<small></small>
+<small></small>
+<small></small>
+<small><a href="https://wiki.freepascal.org/fcl-json" title="fcl-json"><b>English&nbsp;(en)</b></a> │ </small>
+<small></small>
+<small></small>
+<small></small>
+<small></small>
+<small></small>
+<small></small>
+<small></small>
+<small></small>
+<small></small>
+<small></small>
+<small></small>
+<small></small>
+<small></small>
+<small></small>
+<small><b>русский&nbsp;(ru)</b> │ </small>
+<small></small>
+<small></small>
+<small></small>
+<small></small>
+<small></small>
+<small></small>
+<small></small>
+<small></small>
+<br><font color="red"><b></b></font>
+</p>
+<div id="toc" class="toc"><div class="toctitle" dir="ltr" lang="en"><h2>Contents</h2><span class="toctoggle">&nbsp;[<a role="button" tabindex="0" class="togglelink">hide</a>]&nbsp;</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#.D0.98.D0.BD.D1.84.D0.BE.D1.80.D0.BC.D0.B0.D1.86.D0.B8.D1.8F"><span class="tocnumber">1</span> <span class="toctext">Информация</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#.D0.9C.D0.B0.D1.80.D1.88.D0.B0.D0.BB.D0.BB.D0.B8.D0.BD.D0.B3"><span class="tocnumber">2</span> <span class="toctext">Маршаллинг</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#.D0.9F.D1.80.D0.B8.D0.BC.D0.B5.D1.80.D1.8B"><span class="tocnumber">3</span> <span class="toctext">Примеры</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#.D0.98.D1.82.D0.B0.D0.BA.2C_.D0.BD.D0.B0.D1.87.D0.BD.D1.91.D0.BC"><span class="tocnumber">3.1</span> <span class="toctext">Итак, начнём</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#.D0.A1.D0.BE.D1.85.D1.80.D0.B0.D0.BD.D0.B5.D0.BD.D0.B8.D0.B5.2F.D0.B7.D0.B0.D0.B3.D1.80.D1.83.D0.B7.D0.BA.D0.B0_.D0.BF.D0.BE.D0.B7.D0.B8.D1.86.D0.B8.D0.B8.2F.D1.80.D0.B0.D0.B7.D0.BC.D0.B5.D1.80.D0.B0_.D0.B4.D0.B8.D0.B0.D0.BB.D0.BE.D0.B3.D0.B0"><span class="tocnumber">3.2</span> <span class="toctext">Сохранение/загрузка позиции/размера диалога</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#.D0.A1.D0.BE.D1.85.D1.80.D0.B0.D0.BD.D0.B5.D0.BD.D0.B8.D0.B5.2F.D0.B7.D0.B0.D0.B3.D1.80.D1.83.D0.B7.D0.BA.D0.B0_TStringList"><span class="tocnumber">3.3</span> <span class="toctext">Сохранение/загрузка TStringList</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#.D0.98.D1.81.D0.BF.D0.BE.D0.BB.D1.8C.D0.B7.D0.BE.D0.B2.D0.B0.D0.BD.D0.B8.D0.B5_JsonViewer"><span class="tocnumber">3.4</span> <span class="toctext">Использование JsonViewer</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#FpcTwit"><span class="tocnumber">3.5</span> <span class="toctext">FpcTwit</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#.D0.A1.D0.BC.D0.BE.D1.82.D1.80.D0.B8.D1.82.D0.B5_.D1.82.D0.B0.D0.BA.D0.B6.D0.B5"><span class="tocnumber">3.6</span> <span class="toctext">Смотрите также</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h1><span id="Информация"></span><span class="mw-headline" id=".D0.98.D0.BD.D1.84.D0.BE.D1.80.D0.BC.D0.B0.D1.86.D0.B8.D1.8F">Информация</span></h1>
+<p>fcl-json реализация стандарта <a href="https://wiki.freepascal.org/JSON" title="JSON">JSON</a>. 
+</p><p>Пакет содержит юниты:
+</p>
+<ul><li>fpjson: базовый юнит, который реализует TJsonData и их потомков, например TJsonObject</li>
+<li>JsonParser: реализует TJsonParser, используется в примере ниже</li>
+<li>jsonConf: реализует TJsonConfig, что удобно для чтения/записи данных файлов приложения</li>
+<li>jsonScanner: лексический анализатор исходников json</li></ul>
+<div id="shbox" style="border-width:1px; border-color:lightgrey; background-color:#eeeef6; padding: 8px 5px 2px 10px; min-height:34px; border-style:solid; width=500px; display: block; margin-top:20px; font-size:90%;">
+<div class="floatleft"><a href="https://wiki.freepascal.org/File:Note-icon.png" class="image"><img alt="Note-icon.png" src="fcl-json_ru%20-%20Lazarus%20wiki_files/Note-icon.png" width="24" height="29"></a></div>
+<p style="margin-top:0px; margin-left: 24px;"><b>Примечание:</b> В fpjson, доступ, например, <code>SomeJSONObject.Integers['цена']</code> может дать Нарушение SIGSEGV/Access, если это целая переменная не существует. Это, очевидно, сделано намеренно, см [<a class="external autonumber" href="http://bugs.freepascal.org/view.php?id=22273">[1]</a>].</p></div>
+<p>Вы должны были бы использовать метод Find (доступен в FPC 2.6.2), 
+чтобы сначала проверить, существует ли элемент ('цена' в данном 
+примере).
+</p>
+<h1><span id="Маршаллинг"></span><span class="mw-headline" id=".D0.9C.D0.B0.D1.80.D1.88.D0.B0.D0.BB.D0.BB.D0.B8.D0.BD.D0.B3">Маршаллинг</span></h1>
+<p>fcl-json содержит юнит "fpjsonrtti", который используется для 
+загрузки из объектов или сохранения их в формате JSON(экземпляров 
+TObject).
+</p><p>Смотрите <a href="https://wiki.freepascal.org/Streaming_JSON/ru" title="Streaming JSON/ru">Streaming JSON</a> для короткого примера.
+</p>
+<h1><span id="Примеры"></span><span class="mw-headline" id=".D0.9F.D1.80.D0.B8.D0.BC.D0.B5.D1.80.D1.8B">Примеры</span></h1>
+<h2><span id="Итак,_начнём"></span><span class="mw-headline" id=".D0.98.D1.82.D0.B0.D0.BA.2C_.D0.BD.D0.B0.D1.87.D0.BD.D1.91.D0.BC">Итак, начнём</span></h2>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="k">USES</span> <span class="n">fpjson</span><span class="o">,</span> <span class="n">jsonparser</span><span class="o">;</span>
+
+<span class="k">PROCEDURE</span> <span class="nf">JSONTest</span><span class="o">;</span>
+<span class="k">VAR</span>
+   <span class="n">jData</span> <span class="o">:</span> <span class="n">TJSONData</span><span class="o">;</span>
+   <span class="n">jObject</span> <span class="o">:</span> <span class="n">TJSONObject</span><span class="o">;</span>
+   <span class="n">jArray</span> <span class="o">:</span> <span class="n">TJSONArray</span><span class="o">;</span>
+   <span class="n">s</span> <span class="o">:</span> <span class="k">string</span><span class="o">;</span>
+<span class="k">BEGIN</span>   
+   <span class="c1">// это лишь минимальный пример того, что можно сделать с помощью этого API</span>
+
+   <span class="c1">// создать строки JSON</span>
+   <span class="n">jData</span> <span class="o">:=</span> <span class="n">GetJSON</span><span class="p">(</span><span class="s">'{"поле1" : "Привет", "поле2" : 42, "Цвет" : ["Красный", "Зелёный", "Голубой"]}'</span><span class="p">)</span><span class="o">;</span>
+
+   <span class="c1">// вывести как плоскую строку</span>
+   <span class="n">s</span> <span class="o">:=</span> <span class="n">jData</span><span class="o">.</span><span class="n">AsJSON</span><span class="o">;</span>
+
+   <span class="c1">//  вывести замечательно-отформатированный JSON</span>
+   <span class="n">s</span> <span class="o">:=</span> <span class="n">jData</span><span class="o">.</span><span class="n">FormatJSON</span><span class="o">;</span>
+
+   <span class="c1">// передан как TJSONObject для простого доступа</span>
+   <span class="n">jObject</span> <span class="o">:=</span> <span class="n">TJSONObject</span><span class="p">(</span><span class="n">jData</span><span class="p">)</span><span class="o">;</span>
+
+   <span class="c1">// передача значения ключа "поле1"</span>
+   <span class="n">s</span> <span class="o">:=</span> <span class="n">jObject</span><span class="o">.</span><span class="n">Get</span><span class="p">(</span><span class="s">'поле1'</span><span class="p">)</span><span class="o">;</span>
+
+   <span class="c1">// установка значения ключа "поле2"</span>
+   <span class="n">jObject</span><span class="o">.</span><span class="n">Integers</span><span class="p">[</span><span class="s">'поле2'</span><span class="p">]</span> <span class="o">:=</span> <span class="mi">123</span><span class="o">;</span>
+
+   <span class="c1">// передача второго цвета</span>
+   <span class="n">s</span> <span class="o">:=</span> <span class="n">jData</span><span class="o">.</span><span class="n">FindPath</span><span class="p">(</span><span class="s">'Цвет[1]'</span><span class="p">)</span><span class="o">.</span><span class="n">AsString</span><span class="o">;</span>
+
+   <span class="c1">// добавить новый элемент</span>
+   <span class="n">jObject</span><span class="o">.</span><span class="n">Add</span><span class="p">(</span><span class="s">'Happy'</span><span class="o">,</span> <span class="k">True</span><span class="p">)</span><span class="o">;</span>
+
+   <span class="c1">// передать новый подмассив</span>
+   <span class="n">jArray</span> <span class="o">:=</span> <span class="n">TJSONArray</span><span class="o">.</span><span class="n">Create</span><span class="o">;</span>
+   <span class="n">jArray</span><span class="o">.</span><span class="n">Add</span><span class="p">(</span><span class="s">'Север'</span><span class="p">)</span><span class="o">;</span>
+   <span class="n">jArray</span><span class="o">.</span><span class="n">Add</span><span class="p">(</span><span class="s">'Юг'</span><span class="p">)</span><span class="o">;</span>
+   <span class="n">jArray</span><span class="o">.</span><span class="n">Add</span><span class="p">(</span><span class="s">'Восток'</span><span class="p">)</span><span class="o">;</span>
+   <span class="n">jArray</span><span class="o">.</span><span class="n">Add</span><span class="p">(</span><span class="s">'Запад'</span><span class="p">)</span><span class="o">;</span>
+   <span class="n">jObject</span><span class="o">.</span><span class="n">Add</span><span class="p">(</span><span class="s">'Направление'</span><span class="o">,</span> <span class="n">jArray</span><span class="p">)</span><span class="o">;</span>
+
+<span class="k">END</span><span class="o">;</span>
+</pre></div>
+<h2><span id="Сохранение/загрузка_позиции/размера_диалога"></span><span class="mw-headline" id=".D0.A1.D0.BE.D1.85.D1.80.D0.B0.D0.BD.D0.B5.D0.BD.D0.B8.D0.B5.2F.D0.B7.D0.B0.D0.B3.D1.80.D1.83.D0.B7.D0.BA.D0.B0_.D0.BF.D0.BE.D0.B7.D0.B8.D1.86.D0.B8.D0.B8.2F.D1.80.D0.B0.D0.B7.D0.BC.D0.B5.D1.80.D0.B0_.D0.B4.D0.B8.D0.B0.D0.BB.D0.BE.D0.B3.D0.B0">Сохранение/загрузка позиции/размера диалога</span></h2>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="k">USES</span> <span class="n">jsonConf</span><span class="o">;</span>
+
+<span class="k">PROCEDURE</span> <span class="nc">TfmMain</span><span class="o">.</span><span class="nf">SaveOptionsPos</span><span class="o">;</span>
+<span class="k">VAR</span>
+  <span class="n">c</span><span class="o">:</span> <span class="n">TJSONConfig</span><span class="o">;</span>
+<span class="k">BEGIN</span>
+  <span class="n">c</span><span class="o">:=</span> <span class="n">TJSONConfig</span><span class="o">.</span><span class="n">Create</span><span class="p">(</span><span class="k">nil</span><span class="p">)</span><span class="o">;</span>
+  <span class="k">TRY</span>
+    <span class="n">c</span><span class="o">.</span><span class="n">Filename</span><span class="o">:=</span> <span class="n">GetAppPath</span><span class="p">(</span><span class="n">cFileHistory</span><span class="p">)</span><span class="o">;</span>
+    <span class="n">c</span><span class="o">.</span><span class="n">SetValue</span><span class="p">(</span><span class="s">'/dialog/max'</span><span class="o">,</span> <span class="n">WindowState</span><span class="o">=</span><span class="n">wsMaximized</span><span class="p">)</span><span class="o">;</span>
+    <span class="k">if</span> <span class="n">WindowState</span><span class="o">&lt;&gt;</span><span class="n">wsMaximized</span> <span class="k">then</span>
+    <span class="k">BEGIN</span>
+      <span class="n">c</span><span class="o">.</span><span class="n">SetValue</span><span class="p">(</span><span class="s">'/dialog/posx'</span><span class="o">,</span> <span class="n">Left</span><span class="p">)</span><span class="o">;</span>
+      <span class="n">c</span><span class="o">.</span><span class="n">SetValue</span><span class="p">(</span><span class="s">'/dialog/posy'</span><span class="o">,</span> <span class="n">Top</span><span class="p">)</span><span class="o">;</span>
+      <span class="n">c</span><span class="o">.</span><span class="n">SetValue</span><span class="p">(</span><span class="s">'/dialog/sizex'</span><span class="o">,</span> <span class="n">Width</span><span class="p">)</span><span class="o">;</span>
+      <span class="n">c</span><span class="o">.</span><span class="n">SetValue</span><span class="p">(</span><span class="s">'/dialog/sizey'</span><span class="o">,</span> <span class="n">Height</span><span class="p">)</span><span class="o">;</span>
+    <span class="k">END</span><span class="o">;</span>
+  <span class="k">FINALLY</span>
+    <span class="n">c</span><span class="o">.</span><span class="n">Free</span><span class="o">;</span>
+  <span class="k">END</span><span class="o">;</span>
+<span class="k">END</span><span class="o">;</span>
+
+<span class="k">procedure</span> <span class="nc">TfmMain</span><span class="o">.</span><span class="nf">LoadOptionsPos</span><span class="o">;</span>
+<span class="k">var</span>
+  <span class="n">nLeft</span><span class="o">,</span> <span class="n">nTop</span><span class="o">,</span> <span class="n">nW</span><span class="o">,</span> <span class="n">nH</span><span class="o">:</span> <span class="kt">integer</span><span class="o">;</span>
+  <span class="n">c</span><span class="o">:</span> <span class="n">TJSONConfig</span><span class="o">;</span>
+<span class="k">begin</span>
+  <span class="n">c</span><span class="o">:=</span> <span class="n">TJSONConfig</span><span class="o">.</span><span class="n">Create</span><span class="p">(</span><span class="k">nil</span><span class="p">)</span><span class="o">;</span>
+  <span class="k">try</span>
+    <span class="n">c</span><span class="o">.</span><span class="n">Filename</span><span class="o">:=</span> <span class="n">GetAppPath</span><span class="p">(</span><span class="n">cFileHistory</span><span class="p">)</span><span class="o">;</span>
+
+    <span class="n">nLeft</span><span class="o">:=</span> <span class="n">c</span><span class="o">.</span><span class="n">GetValue</span><span class="p">(</span><span class="s">'/dialog/posx'</span><span class="o">,</span> <span class="n">Left</span><span class="p">)</span><span class="o">;</span>
+    <span class="n">nTop</span><span class="o">:=</span> <span class="n">c</span><span class="o">.</span><span class="n">GetValue</span><span class="p">(</span><span class="s">'/dialog/posy'</span><span class="o">,</span> <span class="n">Top</span><span class="p">)</span><span class="o">;</span>
+    <span class="n">nW</span><span class="o">:=</span> <span class="n">c</span><span class="o">.</span><span class="n">GetValue</span><span class="p">(</span><span class="s">'/dialog/sizex'</span><span class="o">,</span> <span class="n">Width</span><span class="p">)</span><span class="o">;</span>
+    <span class="n">nH</span><span class="o">:=</span> <span class="n">c</span><span class="o">.</span><span class="n">GetValue</span><span class="p">(</span><span class="s">'/dialog/sizey'</span><span class="o">,</span> <span class="n">Height</span><span class="p">)</span><span class="o">;</span>
+    <span class="n">SetBounds</span><span class="p">(</span><span class="n">nLeft</span><span class="o">,</span> <span class="n">nTop</span><span class="o">,</span> <span class="n">nW</span><span class="o">,</span> <span class="n">nH</span><span class="p">)</span><span class="o">;</span>
+
+    <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">GetValue</span><span class="p">(</span><span class="s">'/dialog/max'</span><span class="o">,</span> <span class="k">false</span><span class="p">)</span> <span class="k">then</span>
+      <span class="n">WindowState</span><span class="o">:=</span> <span class="n">wsMaximized</span><span class="o">;</span>
+  <span class="k">finally</span>
+    <span class="n">c</span><span class="o">.</span><span class="n">Free</span><span class="o">;</span>
+  <span class="k">end</span><span class="o">;</span>
+<span class="k">end</span><span class="o">;</span>
+</pre></div>
+<h2><span id="Сохранение/загрузка_TStringList"></span><span class="mw-headline" id=".D0.A1.D0.BE.D1.85.D1.80.D0.B0.D0.BD.D0.B5.D0.BD.D0.B8.D0.B5.2F.D0.B7.D0.B0.D0.B3.D1.80.D1.83.D0.B7.D0.BA.D0.B0_TStringList">Сохранение/загрузка TStringList</span></h2>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">//Пример пути: '/list_find'</span>
+
+<span class="k">PROCEDURE</span> <span class="nf">SLoadStringsFromFile</span><span class="p">(</span><span class="n">cfg</span><span class="o">:</span> <span class="n">TJsonConfig</span><span class="o">;</span> <span class="k">const</span> <span class="n">path</span><span class="o">:</span> <span class="k">string</span><span class="o">;</span> <span class="n">List</span><span class="o">:</span> <span class="n">TStrings</span><span class="p">)</span><span class="o">;</span>
+<span class="k">VAR</span>
+  <span class="n">i</span><span class="o">:</span> <span class="kt">integer</span><span class="o">;</span>
+  <span class="n">s</span><span class="o">:</span> <span class="n">UnicodeString</span><span class="o">;</span>
+<span class="k">BEGIN</span>
+  <span class="n">List</span><span class="o">.</span><span class="n">Clear</span><span class="o">;</span>
+  <span class="k">FOR</span> <span class="n">i</span><span class="o">:=</span> <span class="mi">0</span> <span class="k">TO</span> <span class="n">OptMaxHistoryItems</span><span class="o">-</span><span class="mi">1</span> <span class="k">DO</span>
+  <span class="k">BEGIN</span>
+    <span class="n">s</span><span class="o">:=</span> <span class="n">cfg</span><span class="o">.</span><span class="n">GetValue</span><span class="p">(</span><span class="n">path</span><span class="o">+</span><span class="s">'/'</span><span class="o">+</span><span class="nb">inttostr</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">,</span> <span class="s">''</span><span class="p">)</span><span class="o">;</span>
+    <span class="k">IF</span> <span class="n">s</span><span class="o">=</span><span class="s">''</span> <span class="k">THEN</span> <span class="k">break</span><span class="o">;</span>
+    <span class="n">List</span><span class="o">.</span><span class="n">Add</span><span class="p">(</span><span class="nb">Utf8Encode</span><span class="p">(</span><span class="n">s</span><span class="p">))</span><span class="o">;</span>
+  <span class="k">END</span><span class="o">;</span>
+<span class="k">END</span><span class="o">;</span>
+
+<span class="k">PROCEDURE</span> <span class="nf">SSaveStringsToFile</span><span class="p">(</span><span class="n">cfg</span><span class="o">:</span> <span class="n">TJsonConfig</span><span class="o">;</span> <span class="k">const</span> <span class="n">path</span><span class="o">:</span> <span class="k">string</span><span class="o">;</span> <span class="n">List</span><span class="o">:</span> <span class="n">TStrings</span><span class="p">)</span><span class="o">;</span>
+<span class="k">VAR</span>
+  <span class="n">i</span><span class="o">:</span> <span class="kt">integer</span><span class="o">;</span>
+  <span class="n">s</span><span class="o">:</span> <span class="k">string</span><span class="o">;</span>
+<span class="k">BEGIN</span>
+  <span class="k">FOR</span> <span class="n">i</span><span class="o">:=</span> <span class="mi">0</span> <span class="k">TO</span> <span class="n">OptMaxHistoryItems</span><span class="o">-</span><span class="mi">1</span> <span class="k">DO</span>
+  <span class="k">BEGIN</span>
+    <span class="k">IF</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">List</span><span class="o">.</span><span class="n">Count</span> <span class="k">THEN</span>
+      <span class="n">s</span><span class="o">:=</span> <span class="n">List</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="k">ELSE</span>
+      <span class="n">s</span><span class="o">:=</span> <span class="s">''</span><span class="o">;</span>
+    <span class="n">cfg</span><span class="o">.</span><span class="n">SetDeleteValue</span><span class="p">(</span><span class="n">path</span><span class="o">+</span><span class="s">'/'</span><span class="o">+</span><span class="nb">inttostr</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">,</span> <span class="nb">Utf8Decode</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">,</span> <span class="s">''</span><span class="p">)</span><span class="o">;</span>
+  <span class="k">END</span><span class="o">;</span>
+<span class="k">END</span><span class="o">;</span>
+</pre></div>
+<h2><span id="Использование_JsonViewer"></span><span class="mw-headline" id=".D0.98.D1.81.D0.BF.D0.BE.D0.BB.D1.8C.D0.B7.D0.BE.D0.B2.D0.B0.D0.BD.D0.B8.D0.B5_JsonViewer">Использование JsonViewer</span></h2>
+<p>Пример использования можно найти в инструментах Lazarus: jsonviewer 
+(расположенный в lazarus/tools/jsonviewer). В частности, эта часть 
+инструмента показывает, как использовать JSON:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="k">PROCEDURE</span> <span class="nc">TMainForm</span><span class="o">.</span><span class="nf">OpenFile</span><span class="p">(</span><span class="k">Const</span> <span class="n">AFileName</span> <span class="o">:</span> <span class="k">String</span><span class="p">)</span><span class="o">;</span>
+<span class="k">VAR</span>
+  <span class="n">S</span> <span class="o">:</span> <span class="n">TFileStream</span><span class="o">;</span>
+  <span class="n">P</span> <span class="o">:</span> <span class="n">TJSONParser</span><span class="o">;</span>
+  <span class="n">D</span> <span class="o">:</span> <span class="n">TJSONData</span><span class="o">;</span>
+<span class="k">BEGIN</span>
+  <span class="n">S</span><span class="o">:=</span><span class="n">TFileStream</span><span class="o">.</span><span class="n">Create</span><span class="p">(</span><span class="n">AFileName</span><span class="o">,</span><span class="n">fmOpenRead</span><span class="p">)</span><span class="o">;</span>
+  <span class="k">TRY</span>
+    <span class="n">P</span><span class="o">:=</span><span class="n">TJSONParser</span><span class="o">.</span><span class="n">Create</span><span class="p">(</span><span class="n">S</span><span class="p">)</span><span class="o">;</span>
+    <span class="k">TRY</span>
+      <span class="n">P</span><span class="o">.</span><span class="n">Strict</span><span class="o">:=</span><span class="n">FStrict</span><span class="o">;</span>
+      <span class="n">D</span><span class="o">:=</span><span class="n">P</span><span class="o">.</span><span class="n">Parse</span><span class="o">;</span>
+    <span class="k">FINALLY</span>
+      <span class="n">P</span><span class="o">.</span><span class="n">Free</span><span class="o">;</span>
+    <span class="k">END</span><span class="o">;</span>
+  <span class="k">FINALLY</span>
+    <span class="n">S</span><span class="o">.</span><span class="n">Free</span><span class="o">;</span>
+  <span class="k">END</span><span class="o">;</span>
+  <span class="n">FFileName</span><span class="o">:=</span><span class="n">AFileName</span><span class="o">;</span>
+  <span class="n">SetCaption</span><span class="o">;</span>
+  <span class="nb">FreeAndNil</span><span class="p">(</span><span class="n">FRoot</span><span class="p">)</span><span class="o">;</span>
+  <span class="n">FRoot</span><span class="o">:=</span><span class="n">D</span><span class="o">;</span>
+  <span class="n">ShowJSONDocument</span><span class="o">;</span>
+<span class="k">END</span><span class="o">;</span>
+
+<span class="k">PROCEDURE</span> <span class="nc">TMainForm</span><span class="o">.</span><span class="nf">ShowJSONDocument</span><span class="o">;</span>
+<span class="k">BEGIN</span>
+  <span class="k">WITH</span> <span class="n">TVJSON</span><span class="o">.</span><span class="n">Items</span> <span class="k">DO</span>
+    <span class="k">BEGIN</span>
+      <span class="n">BeginUpdate</span><span class="o">;</span>
+      <span class="k">TRY</span>
+        <span class="n">TVJSON</span><span class="o">.</span><span class="n">Items</span><span class="o">.</span><span class="n">Clear</span><span class="o">;</span>
+        <span class="n">SHowJSONData</span><span class="p">(</span><span class="k">Nil</span><span class="o">,</span><span class="n">FRoot</span><span class="p">)</span><span class="o">;</span>
+        <span class="k">WITH</span> <span class="n">TVJSON</span> <span class="k">DO</span>
+          <span class="k">IF</span> <span class="p">(</span><span class="n">Items</span><span class="o">.</span><span class="n">Count</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span> <span class="k">AND</span> <span class="nb">Assigned</span><span class="p">(</span><span class="n">Items</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="k">THEN</span>
+            <span class="k">BEGIN</span>
+              <span class="n">Items</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">Expand</span><span class="p">(</span><span class="k">False</span><span class="p">)</span><span class="o">;</span>
+              <span class="n">Selected</span><span class="o">:=</span><span class="n">Items</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">;</span>
+            <span class="k">END</span><span class="o">;</span>
+      <span class="k">FINALLY</span>
+        <span class="n">EndUpdate</span><span class="o">;</span>
+      <span class="k">END</span><span class="o">;</span>
+    <span class="k">END</span><span class="o">;</span>
+<span class="k">END</span><span class="o">;</span>
+
+<span class="k">PROCEDURE</span> <span class="nc">TMainForm</span><span class="o">.</span><span class="nf">ShowJSONData</span><span class="p">(</span><span class="n">AParent</span> <span class="o">:</span> <span class="n">TTreeNode</span><span class="o">;</span> <span class="n">Data</span> <span class="o">:</span> <span class="n">TJSONData</span><span class="p">)</span><span class="o">;</span>
+<span class="k">VAR</span>
+  <span class="n">N</span><span class="o">,</span><span class="n">N2</span> <span class="o">:</span> <span class="n">TTreeNode</span><span class="o">;</span>
+  <span class="n">I</span> <span class="o">:</span> <span class="kt">Integer</span><span class="o">;</span>
+  <span class="n">D</span> <span class="o">:</span> <span class="n">TJSONData</span><span class="o">;</span>
+  <span class="n">C</span> <span class="o">:</span> <span class="k">String</span><span class="o">;</span>
+  <span class="n">S</span> <span class="o">:</span> <span class="n">TStringList</span><span class="o">;</span>
+<span class="k">BEGIN</span>
+  <span class="n">N</span><span class="o">:=</span><span class="k">Nil</span><span class="o">;</span>
+  <span class="k">IF</span> <span class="nb">Assigned</span><span class="p">(</span><span class="n">Data</span><span class="p">)</span> <span class="k">THEN</span>
+    <span class="k">BEGIN</span>
+    <span class="k">CASE</span> <span class="n">Data</span><span class="o">.</span><span class="n">JSONType</span> <span class="k">OF</span>
+      <span class="n">jtArray</span><span class="o">,</span>
+      <span class="n">jtObject</span><span class="o">:</span>
+        <span class="k">BEGIN</span>
+        <span class="k">IF</span> <span class="p">(</span><span class="n">Data</span><span class="o">.</span><span class="n">JSONType</span><span class="o">=</span><span class="n">jtArray</span><span class="p">)</span> <span class="k">THEN</span>
+          <span class="n">C</span><span class="o">:=</span><span class="n">SArray</span>
+         <span class="k">ELSE</span>
+           <span class="n">C</span><span class="o">:=</span><span class="n">SObject</span><span class="o">;</span>
+        <span class="n">N</span><span class="o">:=</span><span class="n">TVJSON</span><span class="o">.</span><span class="n">Items</span><span class="o">.</span><span class="n">AddChild</span><span class="p">(</span><span class="n">AParent</span><span class="o">,</span><span class="nb">Format</span><span class="p">(</span><span class="n">C</span><span class="o">,</span><span class="p">[</span><span class="n">Data</span><span class="o">.</span><span class="n">Count</span><span class="p">]))</span><span class="o">;</span>
+        <span class="n">S</span><span class="o">:=</span><span class="n">TstringList</span><span class="o">.</span><span class="n">Create</span><span class="o">;</span>
+        <span class="k">TRY</span>
+          <span class="k">FOR</span> <span class="n">I</span><span class="o">:=</span><span class="mi">0</span> <span class="k">TO</span> <span class="n">Data</span><span class="o">.</span><span class="n">Count</span><span class="o">-</span><span class="mi">1</span> <span class="k">DO</span>
+            <span class="k">IF</span> <span class="n">Data</span><span class="o">.</span><span class="n">JSONtype</span><span class="o">=</span><span class="n">jtArray</span> <span class="k">THEN</span>
+              <span class="n">S</span><span class="o">.</span><span class="n">AddObject</span><span class="p">(</span><span class="nb">IntToStr</span><span class="p">(</span><span class="n">I</span><span class="p">)</span><span class="o">,</span><span class="n">Data</span><span class="o">.</span><span class="n">items</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+            <span class="k">ELSE</span>
+              <span class="n">S</span><span class="o">.</span><span class="n">AddObject</span><span class="p">(</span><span class="n">TJSONObject</span><span class="p">(</span><span class="n">Data</span><span class="p">)</span><span class="o">.</span><span class="n">Names</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">,</span><span class="n">Data</span><span class="o">.</span><span class="n">items</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">;</span>
+          <span class="k">IF</span> <span class="n">FSortObjectMembers</span> <span class="k">and</span> <span class="p">(</span><span class="n">Data</span><span class="o">.</span><span class="n">JSONType</span><span class="o">=</span><span class="n">jtObject</span><span class="p">)</span> <span class="k">THEN</span>
+            <span class="n">S</span><span class="o">.</span><span class="n">Sort</span><span class="o">;</span>
+          <span class="k">FOR</span> <span class="n">I</span><span class="o">:=</span><span class="mi">0</span> <span class="k">TO</span> <span class="n">S</span><span class="o">.</span><span class="n">Count</span><span class="o">-</span><span class="mi">1</span> <span class="k">DO</span>
+            <span class="k">BEGIN</span>
+              <span class="n">N2</span><span class="o">:=</span><span class="n">TVJSON</span><span class="o">.</span><span class="n">Items</span><span class="o">.</span><span class="n">AddChild</span><span class="p">(</span><span class="n">N</span><span class="o">,</span><span class="n">S</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">;</span>
+              <span class="n">D</span><span class="o">:=</span><span class="n">TJSONData</span><span class="p">(</span><span class="n">S</span><span class="o">.</span><span class="n">Objects</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">;</span>
+              <span class="n">N2</span><span class="o">.</span><span class="n">ImageIndex</span><span class="o">:=</span><span class="n">ImageTypeMap</span><span class="p">[</span><span class="n">D</span><span class="o">.</span><span class="n">JSONType</span><span class="p">]</span><span class="o">;</span>
+              <span class="n">N2</span><span class="o">.</span><span class="n">SelectedIndex</span><span class="o">:=</span><span class="n">ImageTypeMap</span><span class="p">[</span><span class="n">D</span><span class="o">.</span><span class="n">JSONType</span><span class="p">]</span><span class="o">;</span>
+              <span class="n">ShowJSONData</span><span class="p">(</span><span class="n">N2</span><span class="o">,</span><span class="n">D</span><span class="p">)</span><span class="o">;</span>
+            <span class="k">END</span>
+        <span class="k">FINALLY</span>
+          <span class="n">S</span><span class="o">.</span><span class="n">Free</span><span class="o">;</span>
+        <span class="k">END</span><span class="o">;</span>
+        <span class="k">END</span><span class="o">;</span>
+      <span class="n">jtNull</span><span class="o">:</span>
+        <span class="n">N</span><span class="o">:=</span><span class="n">TVJSON</span><span class="o">.</span><span class="n">Items</span><span class="o">.</span><span class="n">AddChild</span><span class="p">(</span><span class="n">AParent</span><span class="o">,</span><span class="n">SNull</span><span class="p">)</span><span class="o">;</span>
+    <span class="k">ELSE</span>
+      <span class="n">N</span><span class="o">:=</span><span class="n">TVJSON</span><span class="o">.</span><span class="n">Items</span><span class="o">.</span><span class="n">AddChild</span><span class="p">(</span><span class="n">AParent</span><span class="o">,</span><span class="n">Data</span><span class="o">.</span><span class="n">AsString</span><span class="p">)</span><span class="o">;</span>
+    <span class="k">END</span><span class="o">;</span>
+    <span class="k">IF</span> <span class="nb">Assigned</span><span class="p">(</span><span class="n">N</span><span class="p">)</span> <span class="k">THEN</span>
+      <span class="k">BEGIN</span>
+        <span class="n">N</span><span class="o">.</span><span class="n">ImageIndex</span><span class="o">:=</span><span class="n">ImageTypeMap</span><span class="p">[</span><span class="n">Data</span><span class="o">.</span><span class="n">JSONType</span><span class="p">]</span><span class="o">;</span>
+        <span class="n">N</span><span class="o">.</span><span class="n">SelectedIndex</span><span class="o">:=</span><span class="n">ImageTypeMap</span><span class="p">[</span><span class="n">Data</span><span class="o">.</span><span class="n">JSONType</span><span class="p">]</span><span class="o">;</span>
+        <span class="n">N</span><span class="o">.</span><span class="n">Data</span><span class="o">:=</span><span class="n">Data</span><span class="o">;</span>
+      <span class="k">END</span><span class="o">;</span>
+    <span class="k">END</span><span class="o">;</span>
+<span class="k">END</span><span class="o">;</span>
+</pre></div>
+<h2><span class="mw-headline" id="FpcTwit">FpcTwit</span></h2>
+<p>Библиотека <a href="https://wiki.freepascal.org/Components_and_Code_examples#Networking" title="Components and Code examples">Components and Code examples</a> использует JSON для передачи/приема данных.
+</p>
+<h2><span id="Смотрите_также"></span><span class="mw-headline" id=".D0.A1.D0.BC.D0.BE.D1.82.D1.80.D0.B8.D1.82.D0.B5_.D1.82.D0.B0.D0.BA.D0.B6.D0.B5">Смотрите также</span></h2>
+<ul><li>Статья охватывает использование XML и JSON в Free Pascal: <a class="external text" href="http://www.freepascal.org/~michael/articles/webdata/webdata.pdf">PDF</a></li>
+<li><a href="https://wiki.freepascal.org/Package_List" title="Package List">Package List</a></li></ul>
+
+<!-- 
+NewPP limit report
+Cached time: 20200502093030
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.082 seconds
+Real time usage: 0.745 seconds
+Preprocessor visited node count: 580/1000000
+Preprocessor generated node count: 2972/1000000
+Post‐expand include size: 5126/2097152 bytes
+Template argument size: 1087/2097152 bytes
+Highest expansion depth: 19/40
+Expensive parser function count: 28/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 29512/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   46.325      1 -total
+ 97.33%   45.088      1 Template:fcl-json
+ 62.48%   28.943      1 Template:LanguageBar
+ 53.25%   24.669      1 Template:ShowLngBar
+ 39.96%   18.511     29 Template:LngBarItem
+ 16.88%    7.820      1 Template:NameWithoutLngSuffix
+ 16.58%    7.682      1 Template:CategoriesBySuffixForPage
+ 13.53%    6.267      2 Template:IsLngSuffix
+  5.76%    2.667      3 Template:ExtractSuffix
+  5.12%    2.374      4 Template:LngSuffixWithSlash
+-->
+</div>
+<!-- Saved in parser cache with key lazaruswiki:pcache:idhash:13453-0!canonical and timestamp 20200502093030 and revision id 135862
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://wiki.lazarus.freepascal.org/index.php?title=fcl-json/ru&amp;oldid=135862">https://wiki.lazarus.freepascal.org/index.php?title=fcl-json/ru&amp;oldid=135862</a>"</div>
+<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://wiki.freepascal.org/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="https://wiki.freepascal.org/Category:Russian" title="Category:Russian">Russian</a></li><li><a href="https://wiki.freepascal.org/Category:FPC/ru" title="Category:FPC/ru">FPC/ru</a></li><li><a href="https://wiki.freepascal.org/Category:FCL/ru" title="Category:FCL/ru">FCL/ru</a></li><li><a href="https://wiki.freepascal.org/Category:Packages/ru" title="Category:Packages/ru">Packages/ru</a></li><li><a href="https://wiki.freepascal.org/Category:JSON/ru" title="Category:JSON/ru">JSON/ru</a></li></ul></div></div><!-- end content --><div class="visualClear"></div></div></div></div><div id="column-one" dir="ltr" lang="en"><h2>Navigation menu</h2><div role="navigation" class="portlet" id="p-cactions" aria-labelledby="p-cactions-label"><h3 id="p-cactions-label" dir="ltr" lang="en">Views</h3><div class="pBody"><ul dir="ltr" lang="en"><li id="ca-nstab-main" class="selected"><a href="https://wiki.freepascal.org/fcl-json/ru" title="View the content page [Alt+Shift+c]" accesskey="c">Page</a></li><li id="ca-talk" class="new"><a href="https://wiki.freepascal.org/index.php?title=Talk:fcl-json/ru&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [Alt+Shift+t]" accesskey="t">Discussion</a></li><li id="ca-viewsource"><a href="https://wiki.freepascal.org/index.php?title=fcl-json/ru&amp;action=edit" title="This page is protected.
+You can view its source [Alt+Shift+e]" accesskey="e">View source</a></li><li id="ca-history"><a href="https://wiki.freepascal.org/index.php?title=fcl-json/ru&amp;action=history" title="Past revisions of this page [Alt+Shift+h]" accesskey="h">History</a></li></ul></div></div><div role="navigation" class="portlet" id="p-personal" aria-labelledby="p-personal-label"><h3 id="p-personal-label" dir="ltr" lang="en">Personal tools</h3><div class="pBody"><ul dir="ltr" lang="en"><li id="pt-createaccount"><a href="https://wiki.freepascal.org/index.php?title=Special:CreateAccount&amp;returnto=fcl-json%2Fru" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://wiki.freepascal.org/index.php?title=Special:UserLogin&amp;returnto=fcl-json%2Fru" title="You are encouraged to log in; however, it is not mandatory [Alt+Shift+o]" accesskey="o">Log in</a></li></ul></div></div><div class="portlet" id="p-logo" role="banner"><a href="https://www.lazarus.freepascal.org/" class="mw-wiki-logo" title="Visit the main page"></a></div><div role="navigation" class="portlet generated-sidebar" id="p-navigation" aria-labelledby="p-navigation-label"><h3 id="p-navigation-label" dir="ltr" lang="en">Navigation</h3><div class="pBody"><ul dir="ltr" lang="en"><li id="n-mainpage"><a href="https://wiki.freepascal.org/Main_Page" title="Visit the main page [Alt+Shift+z]" accesskey="z">Main Page</a></li><li id="n-documentation"><a href="https://wiki.freepascal.org/Lazarus_Documentation">Documentation</a></li><li id="n-FAQ"><a href="https://wiki.freepascal.org/Lazarus_Faq">FAQ</a></li><li id="n-downloads"><a href="https://wiki.freepascal.org/Components_and_Code_examples">Downloads</a></li><li id="n-glossary"><a href="https://wiki.freepascal.org/Glossary">Glossary</a></li><li id="n-index"><a href="https://wiki.freepascal.org/Special:AllPages">Index</a></li><li id="n-recentchanges"><a href="https://wiki.freepascal.org/Special:RecentChanges" title="A list of recent changes in the wiki [Alt+Shift+r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="https://wiki.freepascal.org/Special:Random" title="Load a random page [Alt+Shift+x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" rel="nofollow" title="The place to find out">Help</a></li></ul></div></div><div role="search" class="portlet" id="p-search"><h3 id="p-search-label" dir="ltr" lang="en"><label for="searchInput">Search</label></h3><div class="pBody" id="searchBody"><form action="/index.php" id="searchform"><input type="hidden" value="Special:Search" name="title"><input type="search" name="search" placeholder="Search Lazarus wiki" title="Search Lazarus wiki [Alt+Shift+f]" accesskey="f" id="searchInput" autocomplete="off"><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchGoButton" class="searchButton">&nbsp; <input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton"></form></div></div><div role="navigation" class="portlet" id="p-tb" aria-labelledby="p-tb-label"><h3 id="p-tb-label" dir="ltr" lang="en">Tools</h3><div class="pBody"><ul dir="ltr" lang="en"><li id="t-whatlinkshere"><a href="https://wiki.freepascal.org/Special:WhatLinksHere/fcl-json/ru" title="A list of all wiki pages that link here [Alt+Shift+j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.freepascal.org/Special:RecentChangesLinked/fcl-json/ru" rel="nofollow" title="Recent changes in pages linked from this page [Alt+Shift+k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="https://wiki.freepascal.org/Special:SpecialPages" title="A list of all special pages [Alt+Shift+q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.freepascal.org/index.php?title=fcl-json/ru&amp;printable=yes" rel="alternate" title="Printable version of this page [Alt+Shift+p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.freepascal.org/index.php?title=fcl-json/ru&amp;oldid=135862" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.freepascal.org/index.php?title=fcl-json/ru&amp;action=info" title="More information about this page">Page information</a></li></ul></div></div></div><!-- end of the left (by default at least) column --><div class="visualClear"></div><div id="footer" role="contentinfo" dir="ltr" lang="en"><div id="f-copyrightico" class="footer-icons"><a href="https://sourceforge.net/"><img src="fcl-json_ru%20-%20Lazarus%20wiki_files/sflogo.png" alt="" width="88" height="31"></a></div><div id="f-poweredbyico" class="footer-icons"><a href="https://www.mediawiki.org/"><img src="fcl-json_ru%20-%20Lazarus%20wiki_files/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"></a></div><ul id="f-list"><li id="lastmod"> This page was last edited on 2 May 2020, at 11:30.</li><li id="copyright">Content is available under <a class="external" rel="nofollow" href="https://sourceforge.net/"></a> unless otherwise noted.</li><li id="privacy"><a href="https://wiki.freepascal.org/Lazarus_wiki:Privacy_policy" title="Lazarus wiki:Privacy policy">Privacy policy</a></li><li id="about"><a href="https://wiki.freepascal.org/Lazarus_wiki:About" title="Lazarus wiki:About">About Lazarus wiki</a></li><li id="disclaimer"><a href="https://wiki.freepascal.org/Lazarus_wiki:General_disclaimer" title="Lazarus wiki:General disclaimer">Disclaimers</a></li></ul></div></div><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.082","walltime":"0.745","ppvisitednodes":{"value":580,"limit":1000000},"ppgeneratednodes":{"value":2972,"limit":1000000},"postexpandincludesize":{"value":5126,"limit":2097152},"templateargumentsize":{"value":1087,"limit":2097152},"expansiondepth":{"value":19,"limit":40},"expensivefunctioncount":{"value":28,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":29512,"limit":5000000},"timingprofile":["100.00%   46.325      1 -total"," 97.33%   45.088      1 Template:fcl-json"," 62.48%   28.943      1 Template:LanguageBar"," 53.25%   24.669      1 Template:ShowLngBar"," 39.96%   18.511     29 Template:LngBarItem"," 16.88%    7.820      1 Template:NameWithoutLngSuffix"," 16.58%    7.682      1 Template:CategoriesBySuffixForPage"," 13.53%    6.267      2 Template:IsLngSuffix","  5.76%    2.667      3 Template:ExtractSuffix","  5.12%    2.374      4 Template:LngSuffixWithSlash"]},"cachereport":{"timestamp":"20200502093030","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":51});});</script>
+<div at-magnifier-wrapper=""><div class="at-theme-light"><div class="at-base notranslate" translate="no"><div class="Z1-AJ" style="top: 0px; left: 0px;"></div></div></div></div><div style="display: none; font-size: 11.4667px;" class="suggestions"><div class="suggestions-results"></div><div class="suggestions-special"></div></div></body><!-- Cached 20200502103849 --></html>

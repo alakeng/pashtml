@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html class="client-js" dir="ltr" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>shared library - Lazarus wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"shared_library","wgTitle":"shared library","wgCurRevisionId":136193,"wgRevisionId":136193,"wgArticleId":3392,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["FPC","Libraries","Other programming languages"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"shared_library","wgRelevantArticleId":3392,"wgRequestId":"9dfcb53217e44a52b30654ab","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSmjSize":110,"wgSmjUseChem":true,"wgSmjInlineMath":[["[math]","[/math]"]]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","ext.pygments":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.monobook.styles":"ready"});mw.loader.implement("user.tokens@189iure",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["ext.SmjCDN","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest"]);});</script>
+<link rel="stylesheet" href="shared%20library%20-%20Lazarus%20wiki_files/load.css">
+<script async="" src="shared%20library%20-%20Lazarus%20wiki_files/load_002.php"></script>
+<!--[if IE 6]><link rel="stylesheet" href="/skins/MonoBook/resources/IE60Fixes.css?303" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="/skins/MonoBook/resources/IE70Fixes.css?303" media="screen"/><![endif]-->
+<style>
+.suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:0;z-index:1099;padding:0;margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:#fff;cursor:pointer;border:1px solid #a2a9b1;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:#fff;cursor:pointer;border:1px solid #a2a9b1;padding:0;margin:0}.suggestions-result{color:#000;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left; overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.suggestions-result-current{background-color:#2a4b8d;color:#fff}.suggestions-special .special-label{color:#72777d;text-align:left}.suggestions-special .special-query{color:#000;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:#c8ccd1}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:#fff}.highlight{font-weight:bold}
+@media screen {
+	.tochidden,.toctoggle{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}.toctoggle{font-size:94%}}
+@media print {
+	.toc.tochidden,.toctoggle{display:none}}</style><style>
+.suggestions a.mw-searchSuggest-link,.suggestions a.mw-searchSuggest-link:hover,.suggestions a.mw-searchSuggest-link:active,.suggestions a.mw-searchSuggest-link:focus{color:#000;text-decoration:none}.suggestions-result-current a.mw-searchSuggest-link,.suggestions-result-current a.mw-searchSuggest-link:hover,.suggestions-result-current a.mw-searchSuggest-link:active,.suggestions-result-current a.mw-searchSuggest-link:focus{color:#fff}.suggestions a.mw-searchSuggest-link .special-query{ overflow:hidden;text-overflow:ellipsis;white-space:nowrap}</style><meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="shared%20library%20-%20Lazarus%20wiki_files/load_002.css">
+<meta name="generator" content="MediaWiki 1.31.7">
+<link rel="shortcut icon" href="https://wiki.lazarus.freepascal.org/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.lazarus.freepascal.org/opensearch_desc.php" title="Lazarus wiki (en)">
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.lazarus.freepascal.org/api.php?action=rsd">
+<link rel="license" href="https://sourceforge.net/">
+<link rel="alternate" type="application/atom+xml" title="Lazarus wiki Atom feed" href="https://wiki.lazarus.freepascal.org/index.php?title=Special:RecentChanges&amp;feed=atom">
+<!--[if lt IE 9]><script src="/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=MonoBook&amp;sync=1"></script><![endif]-->
+<script src="shared%20library%20-%20Lazarus%20wiki_files/load.php"></script><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style></head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-shared_library rootpage-shared_library skin-monobook action-view"><div id="MathJax_Message" style="display: none;"></div><div id="globalWrapper"><div id="column-content"><div id="content" class="mw-body" role="main"><a id="top"></a><div class="mw-indicators mw-body-content">
+</div>
+<h1 id="firstHeading" class="firstHeading" lang="en">shared library</h1><div id="bodyContent" class="mw-body-content"><div id="siteSub">From Lazarus wiki</div><div id="contentSub" dir="ltr" lang="en"></div><div id="jump-to-nav" class="mw-jump">Jump to:<a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div><!-- start content --><div id="mw-content-text" dir="ltr" class="mw-content-ltr" lang="en"><div class="mw-parser-output"><p><small>
+<font color="Gray">│</font> </small><small></small>
+<small></small>
+<small></small>
+<small></small>
+<small><a href="https://wiki.lazarus.freepascal.org/shared_library/de" title="shared library/de"><b>Deutsch&nbsp;(de)</b></a> │ </small>
+<small><b>English&nbsp;(en)</b> │ </small>
+<small><a href="https://wiki.lazarus.freepascal.org/shared_library/es" title="shared library/es"><b>español&nbsp;(es)</b></a> │ </small>
+<small></small>
+<small></small>
+<small></small>
+<small></small>
+<small></small>
+<small></small>
+<small></small>
+<small><a href="https://wiki.lazarus.freepascal.org/shared_library/ko" title="shared library/ko"><b>한국어&nbsp;(ko)</b></a> │ </small>
+<small></small>
+<small></small>
+<small></small>
+<small></small>
+<small></small>
+<small></small>
+<small></small>
+<small></small>
+<small></small>
+<small></small>
+<small></small>
+<small></small>
+<small></small>
+<small></small>
+<br><font color="red"><b></b></font>
+</p><p>A shared library is a compiled piece of code that can be shared 
+and used by various programs. It provides functions and procedures that 
+other programs can call. 
+It is different from a static library (that is linked into an executable
+ and becomes part of it) or an executable.
+Shared library in this article is meant to include both Linux .so and 
+Windows .dll, unless explicitly specified, like "unix shared library" or
+ "dll".
+</p><p>This page tries to document how shared libraries work in 
+combination with FPC. That is: how shared libraries work now, how they 
+should work, as well as how Delphi deals with them.
+</p><p>Let's start with a simple sketch of what forms Delphi supports, 
+because we will of course try to be as compatible as reasonable (limited
+ by the requirement to work on multiple platforms).
+</p><p>This article does not show Kylix details; please feel free to add Kylix details if they are still relevant.
+</p><p><br>
+</p>
+<div id="toc" class="toc"><div class="toctitle" dir="ltr" lang="en"><h2>Contents</h2><span class="toctoggle">&nbsp;[<a role="button" tabindex="0" class="togglelink">hide</a>]&nbsp;</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Delphi"><span class="tocnumber">1</span> <span class="toctext">Delphi</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Linker_namespaces"><span class="tocnumber">2</span> <span class="toctext">Linker namespaces</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Sharemem_implementation_details"><span class="tocnumber">3</span> <span class="toctext">Sharemem implementation details</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#VMT_duplication"><span class="tocnumber">4</span> <span class="toctext">VMT duplication</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Initialization_and_finalization_sections_and_RTL"><span class="tocnumber">5</span> <span class="toctext">Initialization and finalization sections and RTL</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Shared_Exe_Memory_manager"><span class="tocnumber">6</span> <span class="toctext">Shared Exe Memory manager</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Converting_from_Delphi"><span class="tocnumber">7</span> <span class="toctext">Converting from Delphi</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#dllproc"><span class="tocnumber">7.1</span> <span class="toctext">dllproc</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Using_shared_libraries_from_FPC"><span class="tocnumber">8</span> <span class="toctext">Using shared libraries from FPC</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#Initialization_order"><span class="tocnumber">8.1</span> <span class="toctext">Initialization order</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#Using_FPC_libraries_from_other_languages"><span class="tocnumber">9</span> <span class="toctext">Using FPC libraries from other languages</span></a>
+<ul>
+<li class="toclevel-2 tocsection-12"><a href="#Returning_string_results_as_PChars"><span class="tocnumber">9.1</span> <span class="toctext">Returning string results as PChars</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Exposing_objects_using_a_wrapper"><span class="tocnumber">9.2</span> <span class="toctext">Exposing objects using a wrapper</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#.NET"><span class="tocnumber">9.3</span> <span class="toctext">.NET</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Java"><span class="tocnumber">9.4</span> <span class="toctext">Java</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="#See_also"><span class="tocnumber">10</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#References"><span class="tocnumber">11</span> <span class="toctext">References</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Delphi">Delphi</span></h2>
+<p>Delphi to my knowledge knows three (or four) ways of dynamic linking.
+</p>
+<ol><li>create a standalone shared library. (compiling a library unit without "runtime packages" selected).
+<ul><li>This means the RTL will be linked into the shared library</li>
+<li>This also means the memory manager will be its own island. Using 
+automated types in functions that communicate with it is not possible.</li>
+<li>Use of Classes is not possible: both program and shared library have their own copies of the VMT, which breaks e.g. <i>is</i> and <i>as</i> operators</li></ul></li>
+<li>create a standalone shared library. (compiling a library unit without "runtime packages" selected), but while using unit <b>sharemem</b>)
+<ul><li>Comparable with previous case but the memory manager is switched
+ to COM compatible. This means other components/programs that also 
+switch their memory manager to <b>sharemem</b> can call functions that use automated types, because it doesn't matter who returns the block to the COM memmanagement system.</li>
+<li>Note that AFAIK the COM memory manager is quite slow. This road is 
+probably not desired unless you really want to mess with COM, or your 
+componentization is more important than speed.</li></ul></li>
+<li><a href="https://wiki.lazarus.freepascal.org/packages" title="packages">Library packages</a>
+ These are shared libraries for which all dependancies on the Pascal 
+level are known (which units they contain and depend on), and can be 
+treated as parts of the main program that reside in a DLL.
+<ul><li>The RTL is in a separate package (DLL), and both the main 
+program and package use it. Therefore there is only one copy of any unit
+ including system.</li>
+<li>This also means there is only one memory manager, at least for the 
+main program and the packages it uses. IOW shared libs that are not a 
+package can still use an own RTL and memory manager.</li>
+<li>A package can only depend on units in its own package or in other packages.  (separate compilation requirement)</li>
+<li>Because no units are duplicated, there is only one copy of each VMT, making classes use transparent.</li>
+<li>Probably packages can also switch to sharemem, making it compatible 
+with other systems using sharemem. Some way must be found to initialise 
+sharemem as early as possible though (does Delphi do this? Possible test
+ for this is to pass an ansistring created in a init section of a unit 
+in a package to a different sharemem using shared lib that is not a 
+package) <b>to be determined</b></li></ul></li></ol>
+<p>Besides these, Delphi can also generate DLLs that are ActiveX components. <b>to be described/determined</b>
+</p><p>Topics about library packages are mostly moved from this page to the separate <a href="https://wiki.lazarus.freepascal.org/packages" title="packages">packages</a> article, to avoid confusing the discussion.
+</p>
+<h2><span class="mw-headline" id="Linker_namespaces">Linker namespaces</span></h2>
+<p>One of the big problems with porting dynamic libraries from Windows 
+(e.g. DLLs) to Linux and FreeBSD, is the fact that Windows and OS X have
+ a linker namespace per module (as in, per shared lib or binary), with 
+export tables carefully governing exported symbols, and Linux and 
+FreeBSD only have one single linker namespace.
+</p><p>Specially in multi-language projects this is a problem.
+</p><p>I got some feedback on this from a FreeBSD hacker, who recommended to look into ELF visibility attribute, and/or API versioning:
+</p>
+<ul><li><a rel="nofollow" class="external free" href="http://gcc.gnu.org/wiki/Visibility">http://gcc.gnu.org/wiki/Visibility</a></li>
+<li><a rel="nofollow" class="external free" href="http://people.freebsd.org/~deischen/symver/freebsd_versioning.txt">http://people.freebsd.org/~deischen/symver/freebsd_versioning.txt</a></li></ul>
+<p>Note that while the last URL is about FreeBSD, it mentions Linux doing the same.
+</p>
+<h2><span class="mw-headline" id="Sharemem_implementation_details">Sharemem implementation details</span></h2>
+<p>As said, sharemem switches the memory manager to a global one. Under 
+Windows this is AFAIK the COM manager. On *nix a similar memmanager 
+doesn't always exist (Gnome and KDE component architectures might have 
+something similar), so this is not guaranteed. 
+</p><p>One could probably simply have all programs use cmem, which could
+ be a "level 0" implementation for everything that runs in this process.
+</p><p>I explicitely mention this because it might be necessary to 
+impose an own initialisation order (independant of OS shared lib 
+initialisation) to allow the main program to initialise units right 
+after the RTL (system unit) initializations, but before other libs, e.g.
+ a different memory manager.
+</p>
+<h2><span class="mw-headline" id="VMT_duplication">VMT duplication</span></h2>
+<p>The basic problem of VMT duplication is mostly support for the <i>is</i> parameter and similar methods of <i>TObject</i> and <i>TClass</i> like <i>inheritsfrom</i>. This is only solved for packages, IOW for the other two types named above, the <i>is</i> operator doesn't work across libraries/binaries.
+</p><p>In earlier discussions about packages, there was some confusion 
+about this topic. People assumed that packages would somehow tap into 
+the RTL VMTs in the main binary. I'm however pretty sure this is not the
+ case, at least not in Delphi, since if you use packages, the RTL always
+ is a package, too. Also, every dependency of a unit in a package must 
+be in the same package or in a package it has a dependency on. This 
+means a unit (and thus, the VMTs declared in it) only exists once in the
+ greater program (main program + its packages)
+</p>
+<h2><span class="mw-headline" id="Initialization_and_finalization_sections_and_RTL">Initialization and finalization sections and RTL</span></h2>
+<p>(The initialization order of units in packages is moved to the packages page).
+</p><p>The problem with libraries is usually that libraries are 
+initialized as a whole. This can lead to problems with plugin units 
+modifying RTL behaviour (cwstrings, cmem, FV drivers etc)
+</p><p>For stand-alone libraries with internal copies of RTL to 
+function, the RTL needs to be initialized, and the initialization 
+section of the library needs to be called as well.
+</p><p>Roughly there are two options here:
+</p>
+<ul><li>Use (e.g. on ELF platforms) the ABI .init and .fini sections or similar constructs in other binary formats.</li>
+<li>Leave the above initializers mostly empty sections, and enforce an 
+own order using a set of own initializers and finalizers. The ELF init 
+and fini sections merely register the real initializers.</li></ul>
+<p>Mixed forms are also possible, e.g. initialize standalone shared 
+libraries via the initializer sections, but with packages use an own 
+definition.
+</p>
+<h2><span class="mw-headline" id="Shared_Exe_Memory_manager">Shared Exe Memory manager</span></h2>
+<p><b>Lars says:</b> regarding a single memory manager for BPL style 
+packages: what about using the executable and exporting its memory 
+manager? I have had problems trying to use CMEM but have successfully 
+shared the same memory manager using SetMemoryManager/GetMemoryManager 
+tricks. 
+</p><p>See <a class="external free" href="http://www.freepascal.org/contrib/delete.php3?ID=543">http://www.freepascal.org/contrib/delete.php3?ID=543</a>
+ for an example of sharing memory between exe and dll without using 
+CMEM. Powtils CGI library also uses this trick for dynpwu.pas so that 
+ansistrings can be used without any sharemem or cmem unit. The memory 
+manager is exported from the executable or a single library and shared 
+with all the other DLL/EXE's that are connecting to the single module.
+</p><p><b>Marco's answer:</b> First, library packages have more features than just shared memory managers. Unique VMTs (try to use the <i>is</i>
+ operator in your example on a class created in the other lib/exe) and 
+no need to handcraft proper initialization. One just groups units into 
+libs, and the compiler does the rest. No special code required. So what 
+must be done for (library) packages is different (and non competing) to 
+the more general shared library case. And that is what this page is 
+about.
+</p><p>From this general "shared library" case, a subdivision can be separated that has a shared memory manager. 
+</p><p>Note that there can be a bunch of memory managers used for this, 
+and multiple units that work like sharemem. Nearly any memory manager 
+applies. However it is logical to reserve the "sharemem" unit name for 
+the memory manager that is the most compatible for inter-process work on
+ the given platform (COM on Windows, cmem on Unix). So, I'm talking 
+about the default case here, which doesn't mean that other people can't 
+roll their own.
+</p><p>Also, in-compiler (RTL) support must be as universal as possible, and also work for libraries that are not <i>loadlibrary</i>-ed,
+ but autoloaded at binary startup, and not require handcoding e.g. 
+initialization. Also it mustn't stand in the way of handcoded solutions 
+(like the one you reference), in other words it must be overridable, 
+since otherwise in-compiler (RTL) support would stand in the way of what
+ people build on top of FPC.
+</p><p>It would be useful though, if somebody investigate if it is 
+possible to call exported symbols from the binary from an autoloaded 
+library (for the Tier 1 targets, Linux/FreeBSD - Windows - OS X). This 
+because then a library could maybe indeed plug in the mother binary.
+</p><p>In short the first objective is to simply have a default scheme that works like Delphi's sharemem to put in the "sharemem" unit.
+</p><p><b>Marco, added later after some new insights</b>
+</p><p>Moreover a difference is also if the units in the dll are 
+accessed directly, or only over a separately (additionally) defined 
+interface.
+</p><p><b>Lars says: </b> Well another idea: instead of exporting the 
+memory manager from the exe I was thinking about making a fpsharemem.dll
+ that exports one single common FPC memory manager on each platform for 
+all the programs and DLLs to use, instead of using CMEM. i.e. all units 
+put fpsharemem.dll in their uses clause.
+In fact, that's actually what the demo does but instead of a separate 
+fpsharemem.dll it is just inside that single DLL included with the demo 
+and all the other code. i.e. why use CMEM if we can use freepascal 
+memory manager? The freepascal mem manager is available on all platforms
+ isn't it, as long as there is a FreePascal DLL that is created for each
+ platform?  
+</p><p>I guess to answer my own questions it must have to do with 
+COM/IPC (inter process communication) issues/compatibilities. Well 
+anyway, still a very interesting discussion. Doing it by hand the way I 
+did was just a demo to show the concept in action and to prove to people
+ that ansistrings and automated types can be used in regular old DLLs.
+</p><p><b>Marco:</b> If you have to make one (thing? memory manager?) 
+mandatory, make it cmem, because otherwise you might not be able to 
+interface with some shared libs. If you can somehow make it user 
+selectable it would be better. But keep in mind that it is already hard 
+to pack two precompiled sets of units into a release (increasing to 
+200MB installed size or so), let alone more.
+</p><p>Roughly this scheme is what sharemem does, communication over 
+COM/IPC to make sure that a second instance of a library doesn't 
+instantiate its state twice. It avoids the DLL with the memmanager 
+itself by using COM as memory manager. (Something that wouldn't work on 
+Unix, since there is no such global memory manager).
+</p><p>I've thought about this in the past too, but once you start adding a few more things (like <i>is</i>
+ operator support, and something end-user supportable for people that 
+can't write a header to a DLL), you end up with effectively packages 
+again. It is really not that much more, runtime, just a few tables to 
+govern proper unit initialization.
+</p>
+<h2><span class="mw-headline" id="Converting_from_Delphi">Converting from Delphi</span></h2>
+<h3><span class="mw-headline" id="dllproc">dllproc</span></h3>
+<p>In Windows DLLs, Delphi allows you to assign your own procedure to the DLLProc hook to function as a DLL entry point.
+That procedure can handle:
+</p>
+<ul><li>DLL_PROCESS_ATTACH</li>
+<li>DLL_PROCESS_DETACH</li>
+<li>DLL_THREAD_ATTACH</li>
+<li>DLL_THREAD_DETACH</li></ul>
+<p>FreePascal does not have this functionality, but on Windows you can handle three of them:
+</p>
+<ul><li>Dll_Process_Detach_Hook</li>
+<li>Dll_Thread_Attach_Hook</li>
+<li>Dll_Thread_Detach_Hook</li></ul>
+<h2><span class="mw-headline" id="Using_shared_libraries_from_FPC">Using shared libraries from FPC</span></h2>
+<p>See the FPC documentation (to do: insert link). On Windows, the 
+bitness of the program you are writing (e.g. 64 bit application) must 
+match the bitness of the DLL you are using.
+</p><p>Debugging FPC libraries called by an FPC program: if you are using Lazarus:
+</p>
+<ul><li>Open your library project</li>
+<li>Go to Run/Run Parameters, enter the full path of the application that uses your library in Launching Application</li>
+<li>Check the "Use launching application".</li>
+<li>Set the breakpoints as usual and Run the program.</li></ul>
+<h3><span class="mw-headline" id="Initialization_order">Initialization order</span></h3>
+<p>Warning: you should not initialize resources like a db engine that use LoadLibrary to load external libraries in <code>initialization</code> sections or finalize them in <code>finalization</code> (maybe only as last chance) because this is not supported by the underlying operating system. See <a class="external text" href="https://bugs.freepascal.org/view.php?id=26801">Issue #26801</a>.
+</p>
+<h2><span class="mw-headline" id="Using_FPC_libraries_from_other_languages">Using FPC libraries from other languages</span></h2>
+<p>The possibility to create a shared library in FPC and being able to 
+use it in other languages (typically but not limited to C/C++) is one of
+ the key goals of having the idea of shared libraries.
+</p><p>Official documentation: FPC programmer's guide, chapter 12.
+</p><p>In general 
+</p>
+<ul><li>keep you library procedural; do not rely on OOP (Object-Oriented Programming)</li>
+<li>use simple types in the interface procedures, <b>avoid</b> usage of
+<ul><li>ANSI / Unicode strings (non OLE-bases). ShortStrings are ok.</li>
+<li>explicit dynamic strings (open arrays are ok)</li>
+<li>classes</li></ul></li>
+<li>OOP implementation is not portable due to compiler dependent 
+implementation (except for Objective C). Even worse, objects might not 
+be compatible between different versions of the same compiler (i.e. 
+TObject for FPC 2.4.x is not compatible to TObject for 2.6.x)</li></ul>
+<p>More specific information about which types can be exported:
+</p>
+<ul><li>var / const / out parameters
+<ul><li>var - a variable is always passed by reference</li>
+<li>const - might be passed as reference (depending on the size of the variable and target CPU platform (ABI))</li>
+<li>out - a variable is always passed by reference</li>
+<li>if a parameter is passed by reference, it's typically a pointer reference in C</li></ul></li>
+<li>Records - yes, they are compatible with most of the languages. Do 
+keep in mind the "packing" of the record. The best approach is to use 
+"packed record" (the data will be allocated in the most compact way).</li>
+<li>ShortStrings (fixed size strings) - yes - as a simple array of 
+256-characters (bytes), the first byte in the array is the number of 
+characters</li>
+<li>Strings (dynamic strings: AnsiString) - incompatible - do not export; Consider using PChar instead (see example below)</li>
+<li>WideStrings (Windows ONLY - based on OLE) - could be used. Other 
+languages would need to support OLEStrings as well (and handle them 
+through Windows OLE utilities)</li>
+<li>WideStrings (non Windows), Unicode strings - incompatible - consider using PWideChar instead;</li>
+<li>Classes - incompatible. Consider using wrapper functions'</li>
+<li>Objects (old ones) - could be done, but you'll need to export all methods as separate functions/procedures</li>
+<li>Open Arrays - yes, but a single "open array" parameter is in fact 2 
+parameters - a pointer to the array and the size of the array (in 
+elements). Example:</li></ul>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span> <span class="c1">// this declaration cannot be converted to C, as C doesn't have "open arrays"</span>
+ <span class="k">function</span> <span class="nf">Calculation</span><span class="p">(</span><span class="k">const</span> <span class="n">params</span><span class="o">:</span> <span class="k">array</span> <span class="k">of</span> <span class="n">TSomeData</span><span class="o">;</span> <span class="n">a</span><span class="o">,</span> <span class="n">b</span> <span class="o">:</span> <span class="kt">integer</span><span class="p">)</span><span class="o">:</span> <span class="kt">Integer</span><span class="o">;</span>
+</pre></div>
+<p>could be called as 
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span> <span class="c1">// this declaration is easily converted to C</span>
+ <span class="k">function</span> <span class="nf">_Calculation</span><span class="p">(</span><span class="n">params</span><span class="o">:</span> <span class="n">PSomeData</span><span class="o">;</span> <span class="n">paramscount</span><span class="o">:</span> <span class="kt">Integer</span><span class="o">;</span> <span class="n">a</span><span class="o">,</span> <span class="n">b</span> <span class="o">:</span> <span class="kt">integer</span><span class="p">)</span><span class="o">:</span> <span class="kt">Integer</span><span class="o">;</span>
+</pre></div>
+<ul><li>StaticArrays - yes - <i>const</i> might, if <i>var</i> will, be passed as a reference, rather than an array itslef;</li>
+<li>DynamicArrays - <b>dynamic arrays are different from open arrays parameter</b> - not portable. consider using arrays or create wrappers;</li>
+<li>Interfaces COM/CORBA - yes.</li>
+<li>Procedure types - yes - but keep in mind the calling convention, since a callback function call would need to use it as well.</li></ul>
+<p><br>
+</p>
+<h3><span class="mw-headline" id="Returning_string_results_as_PChars">Returning string results as PChars</span></h3>
+<p>This example illustrates the use of PChar to return string-type results:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="k">function</span> <span class="nf">InLibStringFunction</span><span class="o">:</span> <span class="kt">PChar</span><span class="o">;</span> <span class="kp">cdecl</span><span class="o">;</span>
+<span class="k">const</span>
+  <span class="n">MyString</span><span class="o">:</span> <span class="kt">AnsiString</span> <span class="o">=</span> <span class="s">'Hello World'</span><span class="o">;</span>
+<span class="k">begin</span>
+  <span class="bp">result</span> <span class="o">:=</span> <span class="kt">PChar</span><span class="p">(</span><span class="n">MyString</span><span class="p">)</span><span class="o">;</span>
+<span class="k">end</span><span class="o">;</span>
+</pre></div>
+<p>The DLL's memory manager will allocate memory for the PChar.
+This means that your application must not free that memory. It needs to be freed by the DLL.
+This is not a problem if "MyString" does not change through the complete lifetime of your application.
+</p><p>If you want your application to be able to free the PChars then 
+you can allow your main application to free the memory via the library. 
+</p><p>So in that case use this kind of function:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="k">function</span> <span class="nf">InLibStringFunction</span><span class="o">:</span> <span class="kt">PChar</span><span class="o">;</span> <span class="kp">cdecl</span><span class="o">;</span>
+<span class="k">const</span>
+  <span class="n">MyString</span><span class="o">:</span> <span class="kt">AnsiString</span> <span class="o">=</span> <span class="s">'Hello World'</span><span class="o">;</span> 
+<span class="k">begin</span>
+  <span class="bp">Result</span> <span class="o">:=</span> <span class="nb">GetMem</span><span class="p">(</span><span class="nb">Length</span><span class="p">(</span><span class="n">MyString</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">;</span>
+  <span class="nb">Move</span><span class="p">(</span><span class="o">@</span><span class="n">MyString</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">,</span> <span class="bp">Result</span><span class="o">,</span> <span class="nb">Length</span><span class="p">(</span><span class="n">MyString</span><span class="p">))</span><span class="o">;</span>
+  <span class="bp">Result</span><span class="p">[</span><span class="nb">Length</span><span class="p">(</span><span class="n">MyString</span><span class="p">)]</span> <span class="o">:=</span> <span class="mi">0</span><span class="o">;</span>
+<span class="k">end</span><span class="o">;</span>
+</pre></div>
+<p>And, for freeing the allocated memory, you may add this procedure in 
+the library, which you can then call from your main application&nbsp;:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="k">procedure</span> <span class="nf">InLibFreeString</span><span class="p">(</span><span class="n">aStr</span><span class="o">:</span> <span class="kt">PChar</span><span class="p">)</span><span class="o">;</span>
+<span class="k">begin</span>
+  <span class="nb">FreeMem</span><span class="p">(</span><span class="n">aStr</span><span class="p">)</span><span class="o">;</span>
+<span class="k">end</span><span class="o">;</span>
+</pre></div>
+<p>It is a good idea to store the pointer values of the allocated PChar 
+results (e.g. TList or specialize TFPGList&lt;PChar&gt;) so that you can
+ use this inside your exported FreeString function to check whether this
+ is indeed a pointer that you need to free.
+</p>
+<h3><span class="mw-headline" id="Exposing_objects_using_a_wrapper">Exposing objects using a wrapper</span></h3>
+<p>If you need to expose an object, you will need to create wrapper 
+functions. These wrapper functions would accept a pointer parameter, 
+cast it to the object and call the method. Sanity checks are advised.
+</p><p>This is also known as "flattening" the object (to a procedural API/interface).
+</p><p>Keep in mind that you will need to wrap/flatten:
+</p>
+<ul><li>object methods</li>
+<li>object properties</li>
+<li>object fields (Note: BigChimp: what is an object field? Do you mean property?)</li></ul>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="k">library</span> <span class="n">libtest</span><span class="o">;</span>
+
+<span class="k">uses</span>
+  <span class="n">Classes</span><span class="o">,</span> <span class="n">ctypes</span><span class="o">,</span> <span class="n">Math</span><span class="o">,</span> <span class="n">SysUtils</span><span class="o">;</span> 
+
+<span class="k">type</span>
+<span class="n">TMyClass</span> <span class="o">=</span> <span class="k">class</span><span class="p">(</span><span class="n">TThread</span><span class="p">)</span>
+  <span class="kp">public</span>
+  <span class="n">enabled1</span><span class="o">:</span> <span class="kt">boolean</span><span class="o">;</span>
+  <span class="n">int1</span><span class="o">,</span> <span class="n">int2</span><span class="o">:</span> <span class="kt">shortint</span><span class="o">;</span> 
+  <span class="k">function</span> <span class="nf">function1</span><span class="p">()</span><span class="o">:</span> <span class="kt">integer</span><span class="o">;</span> <span class="kp">cdecl</span><span class="o">;</span> 
+<span class="k">end</span><span class="o">;</span>
+
+<span class="k">function</span> <span class="nc">TMyClass</span><span class="o">.</span><span class="nf">function1</span><span class="p">()</span><span class="o">:</span> <span class="kt">integer</span><span class="o">;</span> <span class="kp">cdecl</span><span class="o">;</span> 
+<span class="k">begin</span>
+  <span class="k">if</span> <span class="n">enabled1</span> <span class="k">then</span>
+    <span class="bp">result</span> <span class="o">:=</span> <span class="n">int1</span> <span class="o">+</span> <span class="n">int2</span> <span class="k">else</span> <span class="bp">result</span> <span class="o">:=</span> <span class="o">-</span><span class="mi">1</span><span class="o">;</span>
+<span class="k">end</span><span class="o">;</span> 
+
+<span class="k">exports</span>
+  <span class="n">TMyClass</span><span class="o">.</span><span class="n">function1</span><span class="p">()</span><span class="o">;</span> 
+<span class="k">end</span><span class="o">.</span>
+</pre></div>
+<p>Chould be "wrapped" like this:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="k">library</span> <span class="n">libtest</span><span class="o">;</span>
+
+<span class="k">uses</span>
+  <span class="n">Classes</span><span class="o">,</span> <span class="n">ctypes</span><span class="o">,</span> <span class="n">Math</span><span class="o">,</span> <span class="n">SysUtils</span><span class="o">;</span> 
+
+<span class="k">type</span>
+<span class="n">TMyClass</span> <span class="o">=</span> <span class="k">class</span><span class="p">(</span><span class="n">TThread</span><span class="p">)</span>
+  <span class="kp">public</span>
+  <span class="n">enabled1</span><span class="o">:</span> <span class="kt">boolean</span><span class="o">;</span>
+  <span class="n">int1</span><span class="o">,</span> <span class="n">int2</span><span class="o">:</span> <span class="kt">shortint</span><span class="o">;</span> 
+  <span class="k">function</span> <span class="nf">function1</span><span class="p">()</span><span class="o">:</span> <span class="kt">integer</span><span class="o">;</span> <span class="kp">cdecl</span><span class="o">;</span> 
+<span class="k">end</span><span class="o">;</span>
+
+<span class="k">function</span> <span class="nc">TMyClass</span><span class="o">.</span><span class="nf">function1</span><span class="p">()</span><span class="o">:</span> <span class="kt">integer</span><span class="o">;</span> <span class="kp">cdecl</span><span class="o">;</span>  
+<span class="k">begin</span>
+  <span class="k">if</span> <span class="n">enabled1</span> <span class="k">then</span>
+    <span class="bp">result</span> <span class="o">:=</span> <span class="n">int1</span> <span class="o">+</span> <span class="n">int2</span> 
+  <span class="k">else</span> 
+    <span class="bp">result</span> <span class="o">:=</span> <span class="o">-</span><span class="mi">1</span><span class="o">;</span>
+<span class="k">end</span><span class="o">;</span> 
+
+<span class="k">function</span> <span class="nf">MyClassCreate</span><span class="o">:</span><span class="kt">Pointer</span><span class="o">;</span> <span class="kp">cdecl</span><span class="o">;</span>
+<span class="k">begin</span>
+  <span class="bp">Result</span><span class="o">:=</span><span class="n">TMyClass</span><span class="o">.</span><span class="n">Create</span><span class="o">;</span>
+<span class="k">end</span><span class="o">;</span>
+
+<span class="k">function</span> <span class="nf">MyClassFree</span><span class="p">(</span><span class="n">obj</span><span class="o">:</span><span class="kt">Pointer</span><span class="p">)</span><span class="o">;</span> <span class="kp">cdecl</span><span class="o">;</span>
+<span class="k">begin</span>
+  <span class="n">TMyClass</span><span class="p">(</span><span class="n">Obj</span><span class="p">)</span><span class="o">.</span><span class="n">free</span><span class="o">;</span>
+<span class="k">end</span><span class="o">;</span>
+
+<span class="k">function</span> <span class="nf">MyClassSetEnabled</span><span class="p">(</span><span class="n">obj</span><span class="o">:</span><span class="kt">Pointer</span><span class="o">;</span> <span class="n">aenabled</span><span class="o">:</span> <span class="kt">Boolean</span><span class="p">)</span><span class="o">;</span> <span class="kp">cdecl</span><span class="o">;</span>
+<span class="k">begin</span>
+  <span class="n">TMyClass</span><span class="p">(</span><span class="n">Obj</span><span class="p">)</span><span class="o">.</span><span class="n">enabled</span><span class="o">:=</span><span class="n">aenabled</span><span class="o">;</span>
+<span class="k">end</span><span class="o">;</span>
+
+<span class="k">function</span> <span class="nf">MyClassGetEnabled</span><span class="p">(</span><span class="n">obj</span><span class="o">:</span><span class="kt">Pointer</span><span class="p">)</span><span class="o">:</span> <span class="kt">Boolean</span><span class="o">;</span> <span class="kp">cdecl</span><span class="o">;</span>
+<span class="k">begin</span>
+  <span class="bp">Result</span><span class="o">:=</span><span class="n">TMyClass</span><span class="p">(</span><span class="n">Obj</span><span class="p">)</span><span class="o">.</span><span class="n">enabled</span><span class="o">;</span>
+<span class="k">end</span><span class="o">;</span>
+
+<span class="k">function</span> <span class="nf">MyClassSetData</span><span class="p">(</span><span class="n">obj</span><span class="o">:</span><span class="kt">Pointer</span><span class="o">;</span> <span class="n">i1</span><span class="o">,</span> <span class="n">i2</span><span class="o">:</span> <span class="kt">shortint</span><span class="p">)</span><span class="o">;</span> <span class="kp">cdecl</span><span class="o">;</span>
+<span class="k">begin</span>
+  <span class="n">TMyClass</span><span class="p">(</span><span class="n">Obj</span><span class="p">)</span><span class="o">.</span><span class="n">int1</span><span class="o">:=</span><span class="n">i1</span><span class="o">;</span>
+  <span class="n">TMyClass</span><span class="p">(</span><span class="n">Obj</span><span class="p">)</span><span class="o">.</span><span class="n">int2</span><span class="o">:=</span><span class="n">i2</span><span class="o">;</span>
+<span class="k">end</span><span class="o">;</span>
+
+<span class="k">function</span> <span class="nf">MyClassGetData</span><span class="p">(</span><span class="n">obj</span><span class="o">:</span><span class="kt">Pointer</span><span class="o">;</span> <span class="k">var</span> <span class="n">i1</span><span class="o">,</span> <span class="n">i2</span><span class="o">:</span> <span class="kt">shortint</span><span class="p">)</span><span class="o">;</span> <span class="kp">cdecl</span><span class="o">;</span>
+<span class="k">begin</span>
+  <span class="n">i1</span><span class="o">:=</span><span class="n">TMyClass</span><span class="p">(</span><span class="n">Obj</span><span class="p">)</span><span class="o">.</span><span class="n">int1</span><span class="o">;</span>
+  <span class="n">i2</span><span class="o">:=</span><span class="n">TMyClass</span><span class="p">(</span><span class="n">Obj</span><span class="p">)</span><span class="o">.</span><span class="n">int2</span><span class="o">;</span>
+<span class="k">end</span><span class="o">;</span>
+
+<span class="k">function</span> <span class="nf">MyClassFunction1</span><span class="p">(</span><span class="n">obj</span><span class="o">:</span><span class="kt">Pointer</span><span class="p">)</span><span class="o">:</span> <span class="kt">Integer</span><span class="o">;</span> <span class="kp">cdecl</span><span class="o">;</span>
+<span class="k">begin</span> 
+  <span class="bp">Result</span><span class="o">:=</span><span class="n">TMyClass</span><span class="p">(</span><span class="n">Obj</span><span class="p">)</span><span class="o">.</span><span class="n">function1</span>
+<span class="k">end</span><span class="o">;</span>
+
+
+<span class="k">exports</span>
+  <span class="n">TMyClassCreate</span><span class="o">,</span> <span class="n">MyClassFree</span><span class="o">,</span> <span class="n">MyClassSetEnabled</span><span class="o">,</span> <span class="n">MyClassGetEnabled</span>
+  <span class="o">,</span><span class="n">MyClassSetData</span><span class="o">,</span> <span class="n">MyClassGetData</span><span class="o">,</span> <span class="n">MyClassFunction1</span><span class="o">;</span>
+<span class="k">end</span><span class="o">.</span>
+</pre></div>
+<p>By the way, the same "wrapper"/flattening approach is taken when a 
+C++ library (with classes) needs to be accessed from FPC (or any other 
+language)
+</p>
+<h3><span class="mw-headline" id=".NET">.NET</span></h3>
+<p>More information <a href="https://wiki.lazarus.freepascal.org/Using_Pascal_Libraries_with_.NET_and_Mono" title="Using Pascal Libraries with .NET and Mono">here</a>
+</p>
+<h3><span class="mw-headline" id="Java">Java</span></h3>
+<p>More information <a href="https://wiki.lazarus.freepascal.org/Using_Pascal_Libraries_with_Java" title="Using Pascal Libraries with Java">Using Pascal Libraries with Java</a>
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a href="https://wiki.lazarus.freepascal.org/Lazarus/FPC_Libraries" title="Lazarus/FPC Libraries">Lazarus/FPC Libraries</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span></h2>
+<ul><li>FPC programmer's guide, chapter 12: FPC documentation on programming shared libraries</li>
+<li><a rel="nofollow" class="external free" href="http://www.iecc.com/linker/">http://www.iecc.com/linker/</a></li>
+<li><a class="external free" href="ftp://ftp.freepascal.org/pub/fpc/docs-pdf/CinFreePascal.pdf">ftp://ftp.freepascal.org/pub/fpc/docs-pdf/CinFreePascal.pdf</a></li></ul>
+
+<!-- 
+NewPP limit report
+Cached time: 20200518013103
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.085 seconds
+Real time usage: 2.289 seconds
+Preprocessor visited node count: 624/1000000
+Preprocessor generated node count: 2988/1000000
+Post‐expand include size: 5432/2097152 bytes
+Template argument size: 1247/2097152 bytes
+Highest expansion depth: 19/40
+Expensive parser function count: 28/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 14261/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   70.595      1 -total
+ 97.03%   68.500      1 Template:shared_library
+ 67.63%   47.740      1 Template:LanguageBar
+ 63.79%   45.031      1 Template:ShowLngBar
+ 45.52%   32.135     29 Template:LngBarItem
+ 25.37%   17.912      1 Template:CategoriesBySuffixForPage
+ 12.85%    9.071      1 Template:NameWithoutLngSuffix
+  8.89%    6.275      2 Template:IsLngSuffix
+  3.75%    2.644      1 Template:AutoCategory
+  3.64%    2.572      3 Template:LngSuffixWithSlash
+-->
+</div>
+<!-- Saved in parser cache with key lazaruswiki:pcache:idhash:3392-0!canonical and timestamp 20200518013100 and revision id 136193
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://wiki.lazarus.freepascal.org/index.php?title=shared_library&amp;oldid=136193">https://wiki.lazarus.freepascal.org/index.php?title=shared_library&amp;oldid=136193</a>"</div>
+<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://wiki.lazarus.freepascal.org/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="https://wiki.lazarus.freepascal.org/Category:FPC" title="Category:FPC">FPC</a></li><li><a href="https://wiki.lazarus.freepascal.org/Category:Libraries" title="Category:Libraries">Libraries</a></li><li><a href="https://wiki.lazarus.freepascal.org/Category:Other_programming_languages" title="Category:Other programming languages">Other programming languages</a></li></ul></div></div><!-- end content --><div class="visualClear"></div></div></div></div><div id="column-one" dir="ltr" lang="en"><h2>Navigation menu</h2><div role="navigation" class="portlet" id="p-cactions" aria-labelledby="p-cactions-label"><h3 id="p-cactions-label" dir="ltr" lang="en">Views</h3><div class="pBody"><ul dir="ltr" lang="en"><li id="ca-nstab-main" class="selected"><a href="https://wiki.lazarus.freepascal.org/shared_library" title="View the content page [Alt+Shift+c]" accesskey="c">Page</a></li><li id="ca-talk"><a href="https://wiki.lazarus.freepascal.org/Talk:shared_library" rel="discussion" title="Discussion about the content page [Alt+Shift+t]" accesskey="t">Discussion</a></li><li id="ca-viewsource"><a href="https://wiki.lazarus.freepascal.org/index.php?title=shared_library&amp;action=edit" title="This page is protected.
+You can view its source [Alt+Shift+e]" accesskey="e">View source</a></li><li id="ca-history"><a href="https://wiki.lazarus.freepascal.org/index.php?title=shared_library&amp;action=history" title="Past revisions of this page [Alt+Shift+h]" accesskey="h">History</a></li></ul></div></div><div role="navigation" class="portlet" id="p-personal" aria-labelledby="p-personal-label"><h3 id="p-personal-label" dir="ltr" lang="en">Personal tools</h3><div class="pBody"><ul dir="ltr" lang="en"><li id="pt-createaccount"><a href="https://wiki.lazarus.freepascal.org/index.php?title=Special:CreateAccount&amp;returnto=shared+library" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://wiki.lazarus.freepascal.org/index.php?title=Special:UserLogin&amp;returnto=shared+library" title="You are encouraged to log in; however, it is not mandatory [Alt+Shift+o]" accesskey="o">Log in</a></li></ul></div></div><div class="portlet" id="p-logo" role="banner"><a href="https://www.lazarus.freepascal.org/" class="mw-wiki-logo" title="Visit the main page"></a></div><div role="navigation" class="portlet generated-sidebar" id="p-navigation" aria-labelledby="p-navigation-label"><h3 id="p-navigation-label" dir="ltr" lang="en">Navigation</h3><div class="pBody"><ul dir="ltr" lang="en"><li id="n-mainpage"><a href="https://wiki.lazarus.freepascal.org/Main_Page" title="Visit the main page [Alt+Shift+z]" accesskey="z">Main Page</a></li><li id="n-documentation"><a href="https://wiki.lazarus.freepascal.org/Lazarus_Documentation">Documentation</a></li><li id="n-FAQ"><a href="https://wiki.lazarus.freepascal.org/Lazarus_Faq">FAQ</a></li><li id="n-downloads"><a href="https://wiki.lazarus.freepascal.org/Components_and_Code_examples">Downloads</a></li><li id="n-glossary"><a href="https://wiki.lazarus.freepascal.org/Glossary">Glossary</a></li><li id="n-index"><a href="https://wiki.lazarus.freepascal.org/Special:AllPages">Index</a></li><li id="n-recentchanges"><a href="https://wiki.lazarus.freepascal.org/Special:RecentChanges" title="A list of recent changes in the wiki [Alt+Shift+r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="https://wiki.lazarus.freepascal.org/Special:Random" title="Load a random page [Alt+Shift+x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" rel="nofollow" title="The place to find out">Help</a></li></ul></div></div><div role="search" class="portlet" id="p-search"><h3 id="p-search-label" dir="ltr" lang="en"><label for="searchInput">Search</label></h3><div class="pBody" id="searchBody"><form action="/index.php" id="searchform"><input type="hidden" value="Special:Search" name="title"><input type="search" name="search" placeholder="Search Lazarus wiki" title="Search Lazarus wiki [Alt+Shift+f]" accesskey="f" id="searchInput" autocomplete="off"><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchGoButton" class="searchButton">&nbsp; <input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton"></form></div></div><div role="navigation" class="portlet" id="p-tb" aria-labelledby="p-tb-label"><h3 id="p-tb-label" dir="ltr" lang="en">Tools</h3><div class="pBody"><ul dir="ltr" lang="en"><li id="t-whatlinkshere"><a href="https://wiki.lazarus.freepascal.org/Special:WhatLinksHere/shared_library" title="A list of all wiki pages that link here [Alt+Shift+j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.lazarus.freepascal.org/Special:RecentChangesLinked/shared_library" rel="nofollow" title="Recent changes in pages linked from this page [Alt+Shift+k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="https://wiki.lazarus.freepascal.org/Special:SpecialPages" title="A list of all special pages [Alt+Shift+q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.lazarus.freepascal.org/index.php?title=shared_library&amp;printable=yes" rel="alternate" title="Printable version of this page [Alt+Shift+p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.lazarus.freepascal.org/index.php?title=shared_library&amp;oldid=136193" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.lazarus.freepascal.org/index.php?title=shared_library&amp;action=info" title="More information about this page">Page information</a></li></ul></div></div></div><!-- end of the left (by default at least) column --><div class="visualClear"></div><div id="footer" role="contentinfo" dir="ltr" lang="en"><div id="f-copyrightico" class="footer-icons"><a href="https://sourceforge.net/"><img src="shared%20library%20-%20Lazarus%20wiki_files/sflogo.png" alt="" width="88" height="31"></a></div><div id="f-poweredbyico" class="footer-icons"><a href="https://www.mediawiki.org/"><img src="shared%20library%20-%20Lazarus%20wiki_files/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"></a></div><ul id="f-list"><li id="lastmod"> This page was last edited on 10 May 2020, at 08:16.</li><li id="copyright">Content is available under <a class="external" rel="nofollow" href="https://sourceforge.net/"></a> unless otherwise noted.</li><li id="privacy"><a href="https://wiki.lazarus.freepascal.org/Lazarus_wiki:Privacy_policy" title="Lazarus wiki:Privacy policy">Privacy policy</a></li><li id="about"><a href="https://wiki.lazarus.freepascal.org/Lazarus_wiki:About" title="Lazarus wiki:About">About Lazarus wiki</a></li><li id="disclaimer"><a href="https://wiki.lazarus.freepascal.org/Lazarus_wiki:General_disclaimer" title="Lazarus wiki:General disclaimer">Disclaimers</a></li></ul></div></div><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.085","walltime":"2.289","ppvisitednodes":{"value":624,"limit":1000000},"ppgeneratednodes":{"value":2988,"limit":1000000},"postexpandincludesize":{"value":5432,"limit":2097152},"templateargumentsize":{"value":1247,"limit":2097152},"expansiondepth":{"value":19,"limit":40},"expensivefunctioncount":{"value":28,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":14261,"limit":5000000},"timingprofile":["100.00%   70.595      1 -total"," 97.03%   68.500      1 Template:shared_library"," 67.63%   47.740      1 Template:LanguageBar"," 63.79%   45.031      1 Template:ShowLngBar"," 45.52%   32.135     29 Template:LngBarItem"," 25.37%   17.912      1 Template:CategoriesBySuffixForPage"," 12.85%    9.071      1 Template:NameWithoutLngSuffix","  8.89%    6.275      2 Template:IsLngSuffix","  3.75%    2.644      1 Template:AutoCategory","  3.64%    2.572      3 Template:LngSuffixWithSlash"]},"cachereport":{"timestamp":"20200518013103","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":40});});</script>
+<div style="display: none; font-size: 11.4667px;" class="suggestions"><div class="suggestions-results"></div><div class="suggestions-special"></div></div><div at-magnifier-wrapper=""><div class="at-theme-light"><div class="at-base notranslate" translate="no"><div class="Z1-AJ" style="top: 0px; left: 0px;"></div></div></div></div></body><!-- Cached 20200518064037 --></html>

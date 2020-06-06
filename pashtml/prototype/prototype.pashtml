@@ -1,0 +1,48 @@
+<!--declaring modules-->
+@uses
+{
+	classes, sysutils;
+}
+
+<!--declaring constants-->
+@const
+{
+	firstindex = 1;
+}
+
+<!--declaring global variables-->
+@var
+{
+	name : string = '';
+	index: integer = 0;
+}
+
+<div style="margin-top:30px;">
+    <form method="post">
+        <div>Name: <input name="name" value="@name"/></div>
+        <div><input type="submit" /></div>
+    </form>
+</div>
+
+<div>
+	<!--if statement-->
+    @if (!IsNullOrEmpty(name))
+    {
+        <p>Hello @name!</p>
+    }
+	else
+	{
+		<p>Hello stranger!</p>
+	}
+</div>
+
+
+<div>
+	<ul>
+		<!--for statement-->
+		@for (var item in data.items)
+		{
+			<li>@item.Bar</li>
+		}		  
+	</ul> 
+</div>

@@ -1,0 +1,16 @@
+{$I include.ps}
+
+var
+   msg : string;
+   i : integer;
+   date : TDateTime;
+begin
+     msg := 'Hello world!!!'
+     for i := 0 to 3 do
+     begin
+          Writes(msg);
+     end;
+     p1();
+     date := Now;
+     Writes(DateTimeToStr(Now));
+end.
